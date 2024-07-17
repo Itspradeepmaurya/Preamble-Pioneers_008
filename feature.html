@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header p {
+            margin: 10px 0 20px;
+        }
+        .header button {
+            background-color: #ff5a60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .features {
+            width: 80%;
+            max-width: 1200px;
+            display: grid;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-between; */
+            grid-template-columns: repeat(3,1fr);
+        }
+        .category {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        
+        .category button {
+            background-color: whitesmoke;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .category button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 20px; /* Make the buttons curvy */
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+        }
+
+        .category button:hover {
+            background-color: #ff5a60; /* Change this to the desired hover background color */
+            color: white;             /* Change this to the desired hover text color */
+            border-color: #ff5a60;    /* Match the border color with the background color */
+        }
+
+        .category button:hover {
+            background-color: rgb(116, 163, 116); /* Change this to the desired hover background color */
+            color: black;             /* Change this to the desired hover text color */
+            border-color: darkgreen;    /* Match the border color with the background color */
+        }
+
+        .features .feature {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 40%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 100px;
+            text-align: center;
+        }
+        .features .feature h3 {
+            margin-top: 0 ;
+            font-size: 36px;
+        }
+        .features .feature p {
+            font-size: 18px;
+            color: #666;
+        }
+        .features .feature button {
+            background-color: #ff5a60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Social Hub</h1>
+        <p>Start solving your marketing challenges today with 55+ tools and reports on Semrush.</p>
+        <button>Get Started For Free</button>
+    </div>
+    <div class="category">
+        <button>All</button>
+        <button>SEO</button>
+        <button>Content</button>
+        <button>Market Research</button>
+        <button>Advertising</button>
+        <button>Social Media</button>
+    </div>
+    <div class="features">
+        
+        
+        <div class="feature">
+            <h3>Keyword Research</h3>
+            <p>Bring traffic to your site using the best keywords</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>On-page SEO</h3>
+            <p>Use best tactics to improve your site's health and SEO performance</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Competitor Analysis</h3>
+            <p>Boost your performance by unpacking your competitors' online activity and weekly traffic trends</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Content Marketing</h3>
+            <p> Develop a powerful content strategy with data-driven solutions</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Local SEO</h3>
+            <p> Optimize your site for local searches to get more customers in your area</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Rank Tracking</h3>
+            <p> Track daily changes of your target keywords in your target location</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Social Media Management</h3>
+            <p> Increase your brand awareness with our social media posting and analytics platform</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Link Building</h3>
+            <p>Find unique opportunities to strengthen your backlink profile </p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Competitor SEO Analysis</h3>
+            <p>Find all of the keywords and content in your competitor's strategy</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Content Creation and Distribution</h3>
+            <p>Create and share traffic-driving articles that make your target audience take action</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Content Optimization</h3>
+            <p> Drive more organic traffic with personalized recommendations to optimize your content</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Market Analysis</h3>
+            <p>Analyze your position and get ahead of the competition in a current or new market</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Paid Advertising</h3>
+            <p>See the paid keywords and ad copy from your competitor's PPc ads to craft a winning strategy</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Competitor PR Monitoring </h3>
+            <p>Track your rival's online mentions and social media presence to build your brand's reputation</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>PPC Keyword Research</h3>
+            <p>Build your perfect paid search campaign with our keyword research tools</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Website Monetization</h3>
+            <p>Monetize your audience with our powerful tools for bloggers, ad publishers and affliate managers</p>
+            <button>Learn more</button>
+        </div>
+        <div class="feature">
+            <h3>Paid Ads Management</h3>
+            <p>Set up, launch and optimize your paid ads campaigns directly through Semrush</p>
+            <button>Learn more</button>
+        </div>
+    </div>
+</body>
+</html>

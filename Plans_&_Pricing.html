@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        div.box{
+            max-width: 1200px;
+            margin: auto;
+            font-family: "Roboto", sans-serif;
+        }
+        main h1{
+            font-size:50px;
+        }
+        main h1:hover{
+            color: rgba(0, 0, 255, 0.578);
+        }
+        main div.pay{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:40px;
+        }
+        main div.pay>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            padding:30px;
+        }
+        main div.pay>div button{
+            width: 300px;
+            height: 45px;
+            background-color: #009f81;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            display: block;
+            margin: auto    ;
+        }
+        main div.pay>div button:hover{
+            background-color:#06493dd0;
+        }
+        main p{
+            font-size: 16px;
+        }
+        main p:hover{
+            color: red;
+        }
+        main li::marker{
+            color: green;
+        }
+        main li:hover{
+            color: darkmagenta;
+        }
+        header>div.box{
+            display: grid;
+            grid-template-columns:350px repeat(3,1fr);
+            gap:30px;
+            margin-top:80px;
+        }
+        header>div.box>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left:20px;
+            border-radius:10px;
+        }
+        header>div.box>div button{
+            background-color: #009f81;
+            color: white;
+            font-size: 16px;
+            padding:10px 20px ;
+            border: none;
+            border-radius: 10px;
+        }
+        section div.user{
+            display: grid;
+            grid-template-columns:350px repeat(3,1fr);
+            gap:30px;
+            margin-top:80px;
+        }
+        section div.user>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left:20px;
+            border-radius:10px;
+        }
+        article div.box{
+            margin-top: 50px;
+        }       
+        article div.local{
+            display: grid;
+            grid-template-columns:350px repeat(3,1fr);
+            gap:30px;
+        }
+        article div.local>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left:20px;
+            border-radius:10px;
+        }
+        article button{
+            padding: 12px 35px;
+            border-radius: 10px;
+            border: 3px solid #2a9e82;
+            color: #2a9e82;
+            background-color:white;
+        }
+        article button:hover{
+            background-color:#06493dd0 ;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <h1>Plans & Pricing</h1>
+            <div class="pay">
+                <div>
+                    <h2>Pro</h2>
+                    <h1>Rs 139.95 <span style="font-size: 16px;">monthly</span></h1>
+                    <button>Try for free</button>
+                    <p>or <span style="color: red;">subscribe</span></p>
+                    <p>For newbies and small teams:</p>
+                    <ul>
+                        <li>5 projects</li>
+                        <li>500 keywords to track</li>
+                        <li>10,000 results per report</li>                        
+                    </ul>
+                    <p>SEO, PPC, and research tools:</p>
+                    <p style="color: rgba(0, 0, 0, 0.589);width: 300px;">Competitor analysis, keyword
+                        research, website audit, backlink
+                        analysis, advertising tools, and more</p>
+                </div>
+                <div>
+                    <h2>Guru</h2>
+                    <h1>Rs 249.95 <span style="font-size: 16px;">monthly</span></h1>
+                    <button>Try for free</button>
+                    <p>or <span style="color: red;">subscribe</span></p>
+                    <p>For agencies and mid-size businesses:</p>
+                    <ul>
+                        <li>15 projects</li>
+                        <li>1,500 keywords to track</li>
+                        <li>30,000 results per report</li>                        
+                    </ul>
+                    <p>All Pro features plus:</p>
+                    <p style="color: rgba(0, 0, 0, 0.589);width: 300px;">Content Marketing Toolkit, historical data, multi-location and device tracking, Looker Studio integration, and more</p>
+                </div>
+                <div>
+                    <h2>Business</h2>
+                    <h1>Rs499.95 <span style="font-size: 16px;">monthly</span></h1>
+                    <button>subscribe</button>
+                    <p>or <span style="color: red;">try a custom plan</span></p>
+                    <p>For large agencies and enterprises:</p>
+                    <ul>
+                        <li>40 projects</li>
+                        <li>5,000 keywords to track</li>
+                        <li>50,000 results per report</li>                        
+                    </ul>
+                    <p>All Guru features plus:</p>
+                    <p style="color: rgba(0, 0, 0, 0.589);width: 300px;">Share of Voice, extended limits, API access, PLA analytics, free migration from third-party tools, and more</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <header>
+        <div class="box">
+            <div>
+                <h2>Compare Plans</h2>
+            </div>
+            <div>
+                <h3>Pro</h3>
+                <h2>Rs 139.95 <span style="font-size: 16px;">monthly</span></h2>
+                <button>Try for free</button>
+                <p>or <span style="color: red;">subscribe</span></p>
+            </div>
+            <div>
+                <h3>Guru</h3>
+                <h2>Rs 249.95 <span style="font-size: 16px;">monthly</span></h2>
+                <button>Try for free</button>
+                <p>or <span style="color: red;">subscribe</span></p>
+            </div>
+            <div>
+                <h3>Business</h3>
+                <h2>Rs499.95 <span style="font-size: 16px;">monthly</span></h2>
+                <button>subscribe</button>
+                <p>or <span style="color: red;">try a custom plan</span></p>
+            </div>
+            
+        </div>        
+    </header>
+
+    <section>
+        <div class="box">            
+            <div class="user">
+                <div>
+                    <h2>Additional users</h2>
+                    <p>As an account owner, you can add additional users with unique login credentials under your account — an efficient and secure way to organize teamwork in Semrush.</p>
+                </div>
+                <div>
+                    <p>+Rs.45/mo per user</p>
+                </div>
+                <div>
+                    <p>+Rs.80/mo per user</p>
+                </div>
+                <div>
+                    <p>+Rs.100/mo per user</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article>
+        <div class="box">            
+            <div class="local">                
+                <div>
+                    <h2>Semrush Local</h2>                    
+                    <h4>Basic plan</h4>
+                    <p>Enhance your local visibility and be the top customer choice. Get your business accurately listed across the web with Listing Management and build an impeccable online reputation with Review Management.</p>
+                </div>
+                <div>
+                    <p>+Rs.20/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.20/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.20/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+                <div>                                        
+                    <h4>Premium plan</h4>
+                    <p>All basic features plus:</p>
+                    <ul>
+                        <li>Track Google Maps rankings with Map Rank Tracker</li>
+                        <li>Respond to Google reviews with AI suggestions</li>
+                        <li>Analyze competitor reviews</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>+Rs.40/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.40/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.40/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+
+                <div>                                        
+                    <h2>Semrush .Trends</h2>
+                    <p>.Trends includes:</p>
+                    <ul>
+                        <li>Website mobile and desktop traffic data</li>
+                        <li>Key channels (Search, Ads, Email, etc.)</li>
+                        <li>Daily, weekly, monthly traffic data</li>
+                        <li>Daily, weekly, monthly traffic data</li>
+                        <li>24/7 competitor tracking</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>+Rs.289/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.289/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.289/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+                <div>
+                    <h2>Semrush social</h2>                    
+                    <h4>Social Management</h4>
+                    <p>Manage multiple social media accounts with one subscription. Boost any brand's visibility and reputation. Get a 360º view of your and competitors' strategies with Semrush Social.</p>
+                </div>
+                <div>
+                    <p>+Rs.29.99/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.29.99/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.29.99/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+                <div>                                        
+                    <h4>Social Content AI</h4>
+                    <p>Transform your social media content production process with AI: unlimited social content ideas, copywriting, design, visual templates, and proofreading, all in one place.</p>
+                    
+                </div>
+                <div>
+                    <p>+Rs.29.99/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.29.99/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.29.99/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+                <div>
+                    <h2>Agency Growth Kit</h2>                    
+                    <h4>Start</h4>
+                    <p>Take your agency to the next level by getting inbound and outbound marketing leads, running projects with CRM, collaborating via Client Portals, and reporting progress with professional white-label PDF reports</p>
+                </div>
+                <div>
+                    <p>+Rs.69/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+                <!-- <div>                                        
+                    <h4>Scale</h4>
+                    <p>All Start features plus:</p>
+                    <ul>
+                        <li>Premium visibility on the Agency Partners platform</li>                        
+                        <li>Unlimited CRM</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>+Rs.149/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.149/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+
+                <div>                                        
+                    <h4>Advanced</h4>
+                    <p>All scale features plus:</p>
+                    <ul>
+                        <li>Unlimited Client Portals</li>                        
+                        <li>Client Portals with your domain name</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>+Rs.249/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.249/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.249/mo</p>
+                    <button>Buy now</button>
+                </div>
+
+                <div>                                        
+                    <h2>ImpactHero</h2>
+                    <p>ImpactHero is an AI tool that breaks down your content by buyer journey stages, detects the most impactful copy, and gives tips on reinforcing your efforts. The total price is calculated by the number of campaigns you buy.</p>
+                </div>
+                <div>
+                    <p>+Rs.200/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.200/mo</p>
+                    <button>Buy now</button>
+                </div>
+                <div>
+                    <p>+Rs.200/mo</p>
+                    <button>Buy now</button>
+                <div>
+                
+            </div>
+        </div>
+    </article>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

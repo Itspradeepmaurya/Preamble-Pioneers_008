@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Hub</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .header-container img {
+            height: 40vh;
+            vertical-align: middle;
+            margin-left: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            margin: 20px 0;
+            margin-right: 50px;
+
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header p {
+            margin: 10px 0 20px;
+        }
+
+        .header button,
+        .purple button {
+            background-color: #ff5a60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .category {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            margin-bottom: 20px;
+        }
+
+
+        .category button {
+            background-color: whitesmoke;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .category button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            /* Make the buttons curvy */
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            /* Smooth transition for hover effects */
+        }
+
+        .category button:hover {
+            background-color: #ff5a60;
+            /* Change this to the desired hover background color */
+            color: white;
+            /* Change this to the desired hover text color */
+            border-color: #ff5a60;
+            /* Match the border color with the background color */
+        }
+
+        .category button:hover {
+            background-color: rgb(116, 163, 116);
+            /* Change this to the desired hover background color */
+            color: black;
+            /* Change this to the desired hover text color */
+            border-color: darkgreen;
+            /* Match the border color with the background color */
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+        }
+
+        .card>p {
+            color: grey;
+            font-size: 18px;
+        }
+
+        .card>h3 {
+            font-size: 25px;
+        }
+
+        .card>h3:hover {
+            color: orangered;
+        }
+
+        .card>button {
+            padding: 5px 15px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .card>button:hover {
+            color: orangered;
+        }
+
+        .purple {
+            background-color: rgb(66, 25, 131);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 50vw;
+            color: white;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .purple button {
+            width: 20vw;
+            margin: 10px;
+        }
+
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-category {
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-category h2 {
+            font-size: 1.2em;
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tool-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tool-category ul li {
+            padding: 5px 0;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .tool-category ul li:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tool-category h2 {
+                font-size: 1.1em;
+            }
+
+            .tool-category ul li {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="header">
+            <h1>Social Hub</h1>
+            <p>Start solving your marketing challenges today
+                <br> with 55+ tools and reports on Semrush.
+            </p>
+            <button>Get Started For Free</button>
+        </div>
+        <div>
+            <img src="https://cdn.semrush.com/features/static/features/index/illustration.c4b3988bc6c1.svg">
+
+        </div>
+
+    </div>
+
+    <div class="category container">
+        <button>All</button>
+        <button>SEO</button>
+        <button>Content</button>
+        <button>Market Research</button>
+        <button>Advertising</button>
+        <button>Social Media</button>
+    </div>
+    <div class="features container">
+        <div class="card">
+            <h3>Keyword Research</h3>
+            <p>Bring traffic to your site using the best keywords</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>On-page SEO</h3>
+            <p>Use best tactics to improve your site's health and SEO performance</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Competitor Analysis</h3>
+            <p>Boost your performance by unpacking your competitors' online activity and weekly traffic trends</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Content Marketing</h3>
+            <p> Develop a powerful content strategy with data-driven solutions</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Local SEO</h3>
+            <p> Optimize your site for local searches to get more customers in your area</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Rank Tracking</h3>
+            <p> Track daily changes of your target keywords in your target location</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Social Media Management</h3>
+            <p> Increase your brand awareness with our social media posting and analytics platform</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Link Building</h3>
+            <p>Find unique opportunities to strengthen your backlink profile </p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Competitor SEO Analysis</h3>
+            <p>Find all of the keywords and content in your competitor's strategy</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Content Creation and Distribution</h3>
+            <p>Create and share traffic-driving articles that make your target audience take action</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Content Optimization</h3>
+            <p> Drive more organic traffic with personalized recommendations to optimize your content</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Market Analysis</h3>
+            <p>Analyze your position and get ahead of the competition in a current or new market</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Paid Advertising</h3>
+            <p>See the paid keywords and ad copy from your competitor's PPc ads to craft a winning strategy</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Competitor PR Monitoring </h3>
+            <p>Track your rival's online mentions and social media presence to build your brand's reputation</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>PPC Keyword Research</h3>
+            <p>Build your perfect paid search campaign with our keyword research tools</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Website Monetization</h3>
+            <p>Monetize your audience with our powerful tools for bloggers, ad publishers and affliate managers</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Paid Ads Management</h3>
+            <p>Set up, launch and optimize your paid ads campaigns directly through Semrush</p>
+            <button>Learn more</button>
+        </div>
+    </div>
+    <center>
+        <div class="purple">
+            <h1>Get it all in one with Social-Hub</h1>
+            <button>Get Free Trial</button>
+
+        </div>
+    </center>
+    <div class="container">
+        <h1>All Tools</h1>
+        <div class="tools-grid">
+            <div class="tool-category">
+                <h2>SEO</h2>
+                <ul>
+                    <li>Backlink Analytics</li>
+                    <li>Backlink Audit Tool</li>
+                    <li>Backlink Gap</li>
+                    <li>Bulk Analysis</li>
+                    <li>Domain Overview</li>
+                    <li>Google Looker Studio connectors</li>
+                    <li>Keyword Gap</li>
+                    <li>Keyword Magic Tool</li>
+                    <li>Keyword Overview</li>
+                    <li>Link Building Tool</li>
+                    <li>Listing Management</li>
+                    <li>Log File Analyzer</li>
+                    <li>My Reports</li>
+                    <li>On Page SEO checker</li>
+                    <li>Organic Research</li>
+                    <li>Organic Traffic Insights</li>
+                    <li>Position Tracking</li>
+                    <li>Ranks</li>
+                    <li>Sensor</li>
+                    <li>Site Audit</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h2>Content</h2>
+                <ul>
+                    <li>SEO Content Template</li>
+                    <li>SEO Writing Assistant</li>
+                    <li>Topic Research</li>
+                    <li>Readability Checker</li>
+                    <li>Rephraser Tool</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h2>Advertising</h2>
+                <ul>
+                    <li>Advertising Research</li>
+                    <li>PLA Research</li>
+                    <li>PPC Keyword tool</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h2>Competitive Research</h2>
+                <ul>
+                    <li>Market Explorer</li>
+                    <li>Traffic Analytics</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h2>Agency Growth Kit</h2>
+                <ul>
+                    <li>Agency Partners Platform</li>
+                    <li>Client Portal</li>
+                    <li>CRM</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h2>Social Media</h2>
+                <ul>
+                    <li>Social Media Tools</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

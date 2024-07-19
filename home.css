@@ -1,413 +1,491 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.container {
-  max-width: 1200px;
-  margin: auto;
-  font-family: sans-serif;
-}
-header {
-  background-color: black;
-  color: white;
-
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: clamp(18px, 8vw, 14px);
- 
-}
-.navbar {
-  display: flex;
-  gap: clamp(40px, 6vw, 10px);
-  margin-top: 10px;
-}
-.navbar > a:hover {
-  color: grey;
-}
-nav > div:nth-of-type(4) {
-  display: flex;
-  gap: clamp(20px, 2vw, 5px);
-}
-nav > div:nth-of-type(4) > button {
-  border: 2px solid;
-  padding-top: 5px;
-  padding-inline: clamp(20px, 4vw, 5px);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  font-size: clamp(10px, 8vw, 16px);
-}
-nav > div:nth-of-type(4) > button:hover {
-  background-color: #009f81;
-  color: white;
-  border-color: #009f81;
-}
-.menu-icon {
-  padding: 5px;
-  margin: 10px;
-  font-size: 20px;
-  display: none;
-}
-footer {
-  background-color: rgb(18, 19, 23);
-  color: grey;
-  position: relative;
-  bottom: 0px;
-}
-#foot {
-  display: grid;
-  grid-template-rows: 100px 400px 100px;
-}
-.upperfoot {
-  display: flex;
-  justify-content: space-around;
-}
-.leftupperfoot {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  padding-top: 5px;
-}
-.leftupperfoot > div {
-  padding: 5px 25px;
-  border-radius: 10px;
-}
-.rightupperfoot > button {
-  background-color: #009f81;
-  padding: 5px 55px;
-  border-radius: 10px;
-  color: white;
-}
-.rightupperfoot > button:hover {
-  background-color: #016e5a;
-}
-.rightupperfoot > p {
-  text-align: center;
-}
-.middlefoot {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 15px;
-}
-.middlefoot > div > p:nth-of-type(1) {
-  color: white;
-  font-size: 17px;
-}
-.middlefoot > div > p:hover {
-  color: white;
-}
-.low {
-  background-color: black;
-}
-.lowerfoot {
-  display: flex;
-  justify-content: space-around;
-  place-items: center;
-}
-.lowerfoot > p:hover {
-  color: white;
-}
-#section1 {
-    background-color: rgb(66, 25, 130);
-    height: 1400px;
-}
-.sec1 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: sans-serif;
+  }
+  header {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+  }
+  nav {
     display: flex;
-    flex-direction: column;
-    align-items:center;
-    padding-top: 50px;
-}
-.sec1>h1 , .sec1>p {
-   color: white;
-   font-size: clamp(30px,10vw,60px);
-   text-align: center;
-   width: 50%;
-}
-.sec1>p {
-    font-size: clamp(16px,10vw,23px);
-    padding-top: 25px;
-}
-.sec1>form {
+    justify-content: space-between;
+    font-size: clamp(18px, 8vw, 14px);
+    padding: clamp(16px, 8vw, 12px);
+    
+  }
+  .navbar {
     display: flex;
-    gap: 10px;
-    padding-top: 100px;
-}
-.sec1>form>input {
-    width: clamp(550px, 25vw , 200px);
-    padding-inline: 15px;
-    border-radius: 15px;
-    outline: none;
-}
-
-#section3 {
-    height: 550px;
-}
-.sec3>p {
-   padding-top: 150px;
-   font-size: 35px;
-   font-weight: bolder;
-   text-align: center;
-   width: 70%px;
-   margin-left: 10%;
-}
-.card3 {
-    text-align: center;
-    padding-top: 25px;
-    display: grid;
-    gap: 5px;
-}
-.card3>div {
+    gap: clamp(100px, 6vw, 10px);
+    margin-top: 10px;
+  }
+  .navbar > a:hover {
+    color: grey;
+  }
+  nav > div:nth-of-type(4) {
     display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.card3>h2 {
-    font-size: 25px;
-    font-weight: bold;
-}
-.card3>p:nth-of-type(2){
-   color: grey;
-}
-#section4  {
-  height: 550px;
-}
-.sec4 > p {
-  text-align: center;
-  padding-top: 75px;
-}
-.sec4 > div {
-  display: grid;
-  padding-top: 100px;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(50px,10vw,100px);
+    gap: clamp(20px, 2vw, 5px);
+  }
+  nav > div:nth-of-type(4) > button {
+    border: 2px solid;
+    padding: 10px;
+    padding-inline: clamp(20px, 4vw, 5px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: clamp(10px, 8vw, 16px);
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(2){
+    background-color: #009f81;
+    border: none;
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(1):hover {
+    background-color: rgb(85, 85, 85);
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(2):hover {
+    background-color: #01705c;
+    border: none;
+  }
   
-}
-.card2 {
-   box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
-   border-radius: 15px;
-   padding: 5px 15px;
-   z-index: 2;
-}
-.card2>span>i {
-    position: relative;
-    top: -35px;
-    left: 20px;
-    font-size: 80px;
-    z-index: 0;
-}
-.sec4 > p,
-.card2 > h1{
-    font-size: 50px;
-  font-weight: bolder;
-  text-align: center;
-}
-.card2>p::first-line {
-    font-size: 25px;
-    font-weight: bolder;
-}
-#section5 {
-  height: 500px;
-}
-.sec5 {
-  margin-top: 100px;
-}
-.sec5 > div h1{
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.sec5 > div:nth-of-type(1) {
-  width: clamp(70%, 60vw, 50%);
-  padding-left: 50px;
-}
-.sec5 > div:nth-of-type(1) > p {
-  font-size: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 50px;
-}
-.sec5 > div:nth-of-type(1) > button {
-  margin-top: 50px;
-}
-.sec5 > div:nth-of-type(2) {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  background-color: rgb(69, 224, 167);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.card1 {
-  width: 200px;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border-radius: 15px;
-}
-#section6 {
-  height: 800px;
-  color: rgb(0, 0, 0);
-}
-.sec6,
-.sec5 {
-  display: flex;
-  text-align: left;
-  padding: 50px 0px;
-}
-.sec6 > div:nth-of-type(2) {
-  padding: 50px;
-}
-.sec6 > div > img {
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-.sec6 > div > h1 {
-  font-size: 40px;
-  font-weight: bold;
-}
-.sec6 > div > ul {
-  padding: 50px 20px;
-  font-size: 14px;
-}
-.sec6 > div > ul li {
-  padding: 2px;
-}
-.sec6 > div > ul li:before {
-  content: "✓";
-  padding-inline: 10px;
-  color: rgb(255, 98, 45);
-  font-weight: bolder;
-}
-#section8 {
-  background-color: rgb(66, 25, 130);
-  height: 330px;
-  color: white;
-}
-.sec8 {
-  text-align: center;
-  padding: 50px 0px;
-}
-.sec8 > h1 {
-  font-size: clamp(22px, 8vw, 40px);
-  font-weight: bold;
-}
-.sec8 > p,
-.sec8 > button {
-  margin-top: 30px;
-  font-size: clamp(10px, 8vw, 20px);
-}
-.primarybutton {
-  padding: 13px 70px;
-  background-color: rgb(255, 98, 45);
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  font-size: clamp(10px, 8vw, 24px);
-}
-.primarybutton:hover {
-  background-color: rgb(255, 64, 0);
-}
-
-@media (781px <= width <= 1024px) {
-  #foot {
-    display: grid;
-    grid-template-rows: 100px 400px 100px;
-    font-size: 10px;
-  }
-  #section6 {
-    height: 1200px;
-  }
-  .sec6 {
-    display: flex;
-    flex-direction: column;
-  }
-  .sec1>form {
-    display: grid;
-  }
-  .sec1>form>input {
-    padding: 15px;
-}
-}
-@media (150px <= width <= 780px) {
-  header > nav {
-    position: relative;
-  }
   .menu-icon {
     padding: 5px;
     margin: 10px;
     font-size: 20px;
-    display: block;
-  }
-  .navbar {
     display: none;
   }
-  .menu-icon:active ~ .navbar {
-    display: grid;
-    background-color: black;
-    gap: 30px;
-    position: absolute;
-    top: 50px;
-    width: 100px;
-    padding: 10px;
-  }
-  .menu-icon {
-    cursor: pointer;
-  }
   footer {
-    height: 400px;
-    font-size: 12px;
+    background-color: rgb(18, 19, 23);
+    color: grey;
+    position: relative;
+    bottom: 0px;
+  }
+  #foot {
+    display: grid;
+    grid-template-rows: 100px 400px 100px;
   }
   .upperfoot {
     display: flex;
-    flex-direction: column;
-    height: 200px;
+    justify-content: space-around;
+  }
+  .leftupperfoot {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 5px;
+  }
+  .leftupperfoot > div {
+    padding: 5px 25px;
+    border-radius: 10px;
   }
   .rightupperfoot > button {
-    margin-left: 25%;
+    background-color: #009f81;
+    padding: 5px 55px;
+    border-radius: 10px;
+    color: white;
+  }
+  .rightupperfoot > button:hover {
+    background-color: #016e5a;
+  }
+  .rightupperfoot > p {
+    text-align: center;
   }
   .middlefoot {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 15px;
   }
-  .lowerfoot {
-    position: relative;
-    top: 100px;
-    bottom: 0px;
-    background-color: black;
+  .middlefoot > div > p:nth-of-type(1) {
+    color: white;
+    font-size: 17px;
+  }
+  .middlefoot > div > p:hover {
+    color: white;
   }
   .low {
-    height: 50px;
-    position: relative;
-    top: 100px;
-    background-color: rgb(18, 19, 23);
+    background-color: black;
   }
+  .lowerfoot {
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+  }
+  .lowerfoot > p:hover {
+    color: white;
+  }
+  #shape-left , #shape-right{
+    position: absolute;
+    left: -250px;
+    z-index: 0;
+    animation: rotate 60s linear infinite; 
+    opacity: 1;
+  }
+  #shape-right {
+    left: 1000px;
+    top: -200px;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+@media (min-width <= 1024px) {
+  #shape-left , {
+      left: calc(50% - 965px);
+  }
+}
+@media (min-width <= 768px) {
+  #shape-left , #shape-right{
+      background-image: url(/static/images/shape_left.76ab6e7….svg);
+      position: absolute;
+      left: calc(50% - 885px);
+      top: 380px;
+      width: 742px;
+      height: 748px;
+      transform: rotate(30deg);
+  }
+}
+@media (min-width <= 768px) {
+  #shape-left , #shape-right{
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+  }
+}
+  #section1 {
+      background-color: rgb(66, 25, 130);
+      height: 1400px;
+  }
+  .sec1 {
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      padding-top: 50px;
+  }
+  .sec1>h1::before {
+     background: url(https://www.semrush.com/static/images/shape_top.992d5cba168d1f9dbac6.svg);
+     background-position: center;
+     background-size: cover;
+  }
+  .sec1>h1 , .sec1>p {
+     color: white;
+     font-size: clamp(30px,10vw,60px);
+     text-align: center;
+     width: 50%;
+  }
+  .sec1>p {
+      font-size: clamp(16px,10vw,23px);
+      padding-top: 25px;
+  }
+  .sec1>form {
+      display: flex;
+      gap: 10px;
+      padding-top: 100px;
+  }
+  .sec1>form>input {
+      width: clamp(550px, 25vw , 200px);
+      padding-inline: 15px;
+      border-radius: 15px;
+      outline: none;
+  }
+  
 
+  #section3 {
+      height: 550px;
+     
+  }
+  .bubble {
+    position:absolute;
+    z-index: 1;
+    left: 550px;
+    top: 1025px;
+    font-size: 100px;
+    /* width: clamp(700px,40vw,200px); */
+  }
+  
+  .sec3>p {
+     padding-top: 150px;
+     font-size: 38px;
+     font-weight: bolder;
+     text-align: center;
+     width: 60%;
+     margin-left: 10%;
+     z-index: 3;
+     position:relative;
+  }
+  .card3 {
+      text-align: center;
+      padding-top: 25px;
+      display: grid;
+      gap: 5px;
+  }
+  .card3>div {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  }
+  .card3>h2 {
+      font-size: 25px;
+      font-weight: bold;
+  }
+  .card3>p:nth-of-type(2){
+     color: grey;
+  }
+  #section4  {
+    height: 550px;
+  }
+  .sec4 > p {
+    text-align: center;
+    padding-top: 75px;
+  }
+  .sec4 > div {
+    display: grid;
+    padding-top: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(50px,10vw,100px);
+    
+  }
+  .card2 {
+     box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
+     border-radius: 15px;
+     padding: 5px 15px;
+     z-index: 2;
+  }
+  .card2>span>i {
+      position: relative;
+      top: -35px;
+      left: 20px;
+      font-size: 80px;
+      z-index: 0;
+  }
+  .sec4 > p,
+  .card2 > h1{
+      font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .card2>p::first-line {
+      font-size: 25px;
+      font-weight: bolder;
+  }
+  #section5 {
+    height: 500px;
+  }
+  .sec5 {
+    margin-top: 100px;
+  }
+  .sec5 > div h1{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .sec5 > div:nth-of-type(1) {
+    width: clamp(70%, 60vw, 50%);
+    padding-left: 50px;
+  }
+  .sec5 > div:nth-of-type(1) > p {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+  .sec5 > div:nth-of-type(1) > button {
+    margin-top: 50px;
+  }
+  .sec5 > div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: rgb(69, 224, 167);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .card1 {
+    width: 200px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 15px;
+  }
   #section6 {
-    height: 1150px;
+    height: 800px;
+    color: rgb(0, 0, 0);
   }
   .sec6,
   .sec5 {
     display: flex;
-    flex-direction: column;
-    padding-left: 19px;
-    gap: 15px;
+    text-align: left;
+    padding: 50px 0px;
   }
-  #section5 , #section4 {
-    height: 900px;
+  .sec6 > div:nth-of-type(2) {
+    padding: 50px;
   }
-  .sec4 > div {
-    grid-template-columns: repeat(1,1fr);
+  .sec6 > div > img {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   }
-  .sec1>div {
-    display: grid;
+  .sec6 > div > h1 {
+    font-size: 40px;
+    font-weight: bold;
   }
-  .sec1>div>input {
-    padding: 15px 50px;
-    width: 100%;
-}
+  .sec6 > div > ul {
+    padding: 50px 20px;
+    font-size: 14px;
+  }
+  .sec6 > div > ul li {
+    padding: 2px;
+  }
+  .sec6 > div > ul li:before {
+    content: "✓";
+    padding-inline: 10px;
+    color: rgb(255, 98, 45);
+    font-weight: bolder;
+  }
+  #section8 {
+    background-color: rgb(66, 25, 130);
+    height: 330px;
+    color: white;
+  }
+  .sec8 {
+    text-align: center;
+    padding: 50px 0px;
+  }
+  .sec8 > h1 {
+    font-size: clamp(22px, 8vw, 40px);
+    font-weight: bold;
+  }
+  .sec8 > p,
+  .sec8 > button {
+    margin-top: 30px;
+    font-size: clamp(10px, 8vw, 20px);
+  }
+  .primarybutton {
+    padding: 13px 70px;
+    background-color: rgb(255, 98, 45);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: clamp(10px, 8vw, 24px);
+  }
+  .primarybutton:hover {
+    background-color: rgb(255, 64, 0);
+  }
   
- 
-}
+  @media (781px <= width <= 1024px) {
+    #foot {
+      display: grid;
+      grid-template-rows: 100px 400px 100px;
+      font-size: 10px;
+    }
+    #section6 {
+      height: 1200px;
+    }
+    .sec6 {
+      display: flex;
+      flex-direction: column;
+    }
+    .sec1>form {
+      display: grid;
+    }
+    .sec1>form>input {
+      padding: 15px;
+  }
+  .buuble {
+    font-size: 100px;
+  }
+  }
+  @media (150px <= width <= 780px) {
+    header > nav {
+      position: relative;
+    }
+    .menu-icon {
+      padding: 5px;
+      margin: 10px;
+      font-size: 20px;
+      display: block;
+    }
+    .navbar {
+      display: none;
+    }
+    .menu-icon:active ~ .navbar {
+      display: grid;
+      background-color: black;
+      gap: 30px;
+      position: absolute;
+      top: 50px;
+      width: 100px;
+      padding: 10px;
+    }
+    .menu-icon {
+      cursor: pointer;
+    }
+    footer {
+      height: 400px;
+      font-size: 12px;
+    }
+    .upperfoot {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+    }
+    .rightupperfoot > button {
+      margin-left: 25%;
+    }
+    .middlefoot {
+      display: none;
+    }
+    .lowerfoot {
+      position: relative;
+      top: 100px;
+      bottom: 0px;
+      background-color: black;
+    }
+    .low {
+      height: 50px;
+      position: relative;
+      top: 100px;
+      background-color: rgb(18, 19, 23);
+    }
+  
+    #section6 {
+      height: 1150px;
+    }
+    .sec6,
+    .sec5 {
+      display: flex;
+      flex-direction: column;
+      padding-left: 19px;
+      gap: 15px;
+    }
+    #section5 , #section4 {
+      height: 900px;
+    }
+    .sec4 > div {
+      grid-template-columns: repeat(1,1fr);
+    }
+    .sec1>div {
+      display: grid;
+    }
+    .sec1>div>input {
+      padding: 15px 50px;
+      width: 100%;
+  }
+    .bubble {
+      font-size: 100px;
+    }
+   
+  }
+  

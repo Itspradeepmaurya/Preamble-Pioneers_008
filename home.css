@@ -11,17 +11,20 @@
   header {
     background-color: black;
     color: white;
-  
+    position: sticky;
+    top: 0px;
+    z-index: 3;
   }
   nav {
     display: flex;
     justify-content: space-between;
     font-size: clamp(18px, 8vw, 14px);
-   
+    padding: clamp(16px, 8vw, 12px);
+    
   }
   .navbar {
     display: flex;
-    gap: clamp(40px, 6vw, 10px);
+    gap: clamp(100px, 6vw, 10px);
     margin-top: 10px;
   }
   .navbar > a:hover {
@@ -33,18 +36,25 @@
   }
   nav > div:nth-of-type(4) > button {
     border: 2px solid;
-    padding-top: 5px;
+    padding: 10px;
     padding-inline: clamp(20px, 4vw, 5px);
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
     font-size: clamp(10px, 8vw, 16px);
   }
-  nav > div:nth-of-type(4) > button:hover {
+  nav > div:nth-of-type(4) > button:nth-of-type(2){
     background-color: #009f81;
-    color: white;
-    border-color: #009f81;
+    border: none;
   }
+  nav > div:nth-of-type(4) > button:nth-of-type(1):hover {
+    background-color: rgb(85, 85, 85);
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(2):hover {
+    background-color: #01705c;
+    border: none;
+  }
+  
   .menu-icon {
     padding: 5px;
     margin: 10px;
@@ -110,6 +120,50 @@
   .lowerfoot > p:hover {
     color: white;
   }
+  #shape-left , #shape-right{
+    position: absolute;
+    left: -250px;
+    z-index: 0;
+    animation: rotate 60s linear infinite; 
+    opacity: 1;
+  }
+  #shape-right {
+    left: 1000px;
+    top: -200px;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+@media (min-width <= 1024px) {
+  #shape-left , {
+      left: calc(50% - 965px);
+  }
+}
+@media (min-width <= 768px) {
+  #shape-left , #shape-right{
+      background-image: url(/static/images/shape_left.76ab6e7….svg);
+      position: absolute;
+      left: calc(50% - 885px);
+      top: 380px;
+      width: 742px;
+      height: 748px;
+      transform: rotate(30deg);
+  }
+}
+@media (min-width <= 768px) {
+  #shape-left , #shape-right{
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+  }
+}
   #section1 {
       background-color: rgb(66, 25, 130);
       height: 1400px;
@@ -119,6 +173,11 @@
       flex-direction: column;
       align-items:center;
       padding-top: 50px;
+  }
+  .sec1>h1::before {
+     background: url(https://www.semrush.com/static/images/shape_top.992d5cba168d1f9dbac6.svg);
+     background-position: center;
+     background-size: cover;
   }
   .sec1>h1 , .sec1>p {
      color: white;
@@ -142,16 +201,29 @@
       outline: none;
   }
   
+
   #section3 {
       height: 550px;
+     
   }
+  .bubble {
+    position:absolute;
+    z-index: 1;
+    left: 550px;
+    top: 1025px;
+    font-size: 100px;
+    /* width: clamp(700px,40vw,200px); */
+  }
+  
   .sec3>p {
      padding-top: 150px;
-     font-size: 35px;
+     font-size: 38px;
      font-weight: bolder;
      text-align: center;
-     width: 70%px;
+     width: 60%;
      margin-left: 10%;
+     z-index: 3;
+     position:relative;
   }
   .card3 {
       text-align: center;
@@ -331,6 +403,9 @@
     .sec1>form>input {
       padding: 15px;
   }
+  .buuble {
+    font-size: 100px;
+  }
   }
   @media (150px <= width <= 780px) {
     header > nav {
@@ -408,7 +483,9 @@
       padding: 15px 50px;
       width: 100%;
   }
-    
+    .bubble {
+      font-size: 100px;
+    }
    
   }
   

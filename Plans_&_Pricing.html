@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
       body {
         margin: auto;
@@ -216,129 +215,6 @@
         header div.box,section div.user,article div.local{
           grid-template-columns: repeat(3,1fr);
           margin: auto;
-
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-    *{
-        padding: 0;
-        margin: 0;
-
-    }
-        header {
-    background-color: black;
-    color: white;
-    position: sticky;
-    top: 0px;
-    z-index: 3;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    font-size: clamp(18px, 8vw, 14px);
-    padding: clamp(16px, 8vw, 12px);
-  }
-  .navbar {
-    display: flex;
-    gap: clamp(100px, 6vw, 10px);
-    margin-top: 10px;
-  }
-  .navbar > a:hover {
-    color: grey;
-  }
-  nav > div:nth-of-type(4) {
-    display: flex;
-    gap: clamp(20px, 2vw, 5px);
-  }
-  nav > div:nth-of-type(4) > button {
-    border: 2px solid;
-    padding: 10px;
-    padding-inline: clamp(20px, 4vw, 5px);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    font-size: clamp(10px, 8vw, 16px);
-  }
-  nav > div:nth-of-type(4) > button:nth-of-type(2){
-    background-color: #009f81;
-    border: none;
-  }
-  nav > div:nth-of-type(4) > button:nth-of-type(1):hover {
-    background-color: rgb(85, 85, 85);
-  }
-  nav > div:nth-of-type(4) > button:nth-of-type(2):hover {
-    background-color: #01705c;
-    border: none;
-  }
-  
-  .menu-icon {
-    padding: 5px;
-    margin: 10px;
-    font-size: 20px;
-    display: none;
-  }
-  footer {
-    background-color: rgb(18, 19, 23);
-    color: grey;
-    position: relative;
-    bottom: 0px;
-  }
-  #foot {
-    display: grid;
-    grid-template-rows: 100px 400px 100px;
-  }
-  .upperfoot {
-    display: flex;
-    justify-content: space-around;
-  }
-  .leftupperfoot {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-top: 5px;
-  }
-  .leftupperfoot > div {
-    padding: 5px 25px;
-    border-radius: 10px;
-  }
-  .rightupperfoot > button {
-    background-color: #009f81;
-    padding: 5px 55px;
-    border-radius: 10px;
-    color: white;
-  }
-  .rightupperfoot > button:hover {
-    background-color: #016e5a;
-  }
-  .rightupperfoot > p {
-    text-align: center;
-  }
-  .middlefoot {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    padding: 15px;
-  }
-  .middlefoot > div > p:nth-of-type(1) {
-    color: white;
-    font-size: 17px;
-  }
-  .middlefoot > div > p:hover {
-    color: white;
-  }
-  .low {
-    background-color: black;
-  }
-  .lowerfoot {
-    display: flex;
-    justify-content: space-around;
-    place-items: center;
-  }
-  .lowerfoot > p:hover {
-    color: white;
-  }
-        div.box{
-            max-width: 1200px;
-            margin: auto;
-            font-family: "Roboto", sans-serif;
-
         }
       }
       @media(width <=750px){
@@ -366,7 +242,8 @@
         }
       }
     </style>
-
+  </head>
+  <body>
     <main>
       <div class="box">
         <div id="top">
@@ -428,6 +305,72 @@
       </div>
     </main>
 
+    <div class="box" style="padding-top: 10px">
+      <img style="width:100%;" src="https://static-web.upmetrics.co/wp-content/uploads/2021/04/16125203/ideal-business-planning-strategy.png"
+        alt=""
+      />
+    </div>
+
+    <header>
+      
+      <div class="box">
+        
+        <div>
+          <h2>Compare Plans</h2>
+        </div>
+        <div>
+          <h3>Pro</h3>
+          <h2>Rs 139.95 <span style="font-size: 16px">monthly</span></h2>
+          <button>Try for free</button>
+          <p>or <span style="color: red">subscribe</span></p>
+        </div>
+        <div>
+          <h3>Guru</h3>
+          <h2>Rs 249.95 <span style="font-size: 16px">monthly</span></h2>
+          <button>Try for free</button>
+          <p>or <span style="color: red">subscribe</span></p>
+        </div>
+        <div>
+          <h3>Business</h3>
+          <h2>Rs499.95 <span style="font-size: 16px">monthly</span></h2>
+          <button>subscribe</button>
+          <p>or <span style="color: red">try a custom plan</span></p>
+        </div>
+      </div>
+    
+    </header>
+
+    <section>
+      <div class="box">
+        <div style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 15px; margin-top: 30px;">
+        <div class="user">
+          <div>
+            <h2>Additional users</h2>
+            <p>
+              As an account owner, you can add additional users with unique
+              login credentials under your account — an efficient and secure way
+              to organize teamwork in Semrush.
+            </p>
+          </div>
+          <div>
+            <p>+Rs.45/mo per user</p>
+          </div>
+          <div>
+            <p>+Rs.80/mo per user</p>
+          </div>
+          <div>
+            <p>+Rs.100/mo per user</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <article>
+      <div class="box">
+        <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
+          <h2 style="padding-top: 15px; padding-left: 15px">Semrush local</h2>
+          <div class="local" style="box-shadow: none">
             <div>
               <h4>Basic plan</h4>
               <p>
@@ -449,10 +392,7 @@
               <p>+Rs.20/mo</p>
               <button>Buy now</button>
             </div>
-
           </div>
-
-
 
           <div class="local" style="box-shadow: none">
             <div>
@@ -551,7 +491,6 @@
             </div>
           </div>
         </div>
-
         <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
           <h2 style="padding-top: 15px; padding-left: 15px">
             Agency Growth Kit
@@ -750,118 +689,5 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-    <footer>
-        <section id="foot" class="">
-          <div class="upperfoot container">
-              <div class="leftupperfoot">
-                 <div><i class="fa-regular fa-envelope"></i> Contact us </div>
-                 <p>20, 1st Floor, 3rd Cross, Jambu Nagar, Bengaluru, Karnataka</p>
-              </div>
-              <div class="rightupperfoot">
-                <button>Get started with Social Metric!</button>
-                <p>or see our plans & pricing</p>
-              </div>
-          </div>
-          <div class="middlefoot container">
-            <div>
-              <p>SOCIALMETRICS</p>
-              <p>Features</p>
-              <p>Pricing</p>
-              <p>Success Stories</p>
-              <p>Stats and Facts</p>
-              <p>Insights</p>
-              <p>News</p>
-            </div>
-            <div>
-              <p>COMMUNITY</p>
-              <p>Social Metric Blog</p>
-              <p>Webinars</p>
-            </div>
-            <div>
-              <p>MORE TOOLS</p>
-              <p>Analytics Reports</p>
-              <p>Projects</p>
-              <p>Agency Partners</p>
-              <p>Affiliate Program</p>
-              <p>SEOquake</p>
-              <p>Sensor</p>
-              <p>Prowly</p>
-              <p>Kompyte</p>
-              <p>App Center</p>
-              <p>Enterprise SEO</p>
-              <p>Free Tools</p>
-            </div>
-            <div>
-              <p>COMPANY</p>
-              <p>About Us</p>
-              <p>Newsroom</p>
-              <p>Careers</p>
-              <p>Partners</p>
-              <p>Legal Info</p>
-              <p>Privacy Policy</p>
-              <p>Cookie Settings</p>
-              <p>Do not sell my
-                personal info</p>
-              <p>Security Info</p>
-              <p>For Investors</p>
-              <p>Social Metric Select</p>
-              <p>Global Issues Index</p>
-              <p>Contact Us</p>
-            </div>
-            <div>
-              <p>FOLLOW US</p>
-              <p>X (Twitter)</p>
-              <p>Facebook</p>
-              <p>Linkedln</p>
-              <p>Instagram</p>
-              <p>YouTube</p>
-              <p>Pinterest</p>
-            </div>
-            <div>
-              <p>HELP</p>
-              <p>Knowledge Base</p>
-              <p>Academy</p>
-              <p>Social Metric API</p>
-            </div>
-          </div>
-          <div class="low" style="">
-            <div class="lowerfoot container">
-              <div style="width: 110px;"><img src="./SOCIAl.png" alt="logo" style="width: 100%;"></div>
-              <p>&copy; 2008 - 2024 Social Metric. All rights reserved.</p>
-            </div>
-          </div>
-          
-        </section>
-   </footer>
-</body>
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </body>
+</html>

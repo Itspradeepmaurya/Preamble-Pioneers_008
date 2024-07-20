@@ -1,389 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        div.box{
-            max-width: 1200px;
-            margin: auto;
-            font-family: "Roboto", sans-serif;
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      body {
+        margin: auto;
+        padding: 0px;
+        margin: 0px;       
+        background: linear-gradient(#dbd3ae5f, white, #e9c2005e, white);
+      }
+      div.box {
+        max-width: 1200px;
+        margin: auto;
+        font-family: "Roboto", sans-serif;
+      }
+      div#top {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm8v3FEFDITt2x9e56U-_1-mgGfRnwA9N28g&s");
+        background-position: center;
+        background-size: cover;
+        height: 100px;
+        padding: 10px 20px 20px 0px;
+        margin-bottom: 10px;
+      }
+      main h1 {
+        font-size: 50px;
+      }
+      main h1:hover {
+        color: rgba(0, 0, 255, 0.578);
+      }
+      main div.pay {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+      main div.pay > div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        padding: 30px;
+      }
+      main div.pay > div button {
+        width: 300px;
+        height: 45px;
+        background-color: #009f81;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        display: block;
+        margin: auto;
+      }
+      main div.pay > div button:hover {
+        background-color: #06493dd0;
+      }
+      main p {
+        font-size: 16px;
+      }
+      main p:hover {
+        color: red;
+      }
+      main li::marker {
+        color: green;
+      }
+      main li:hover {
+        color: darkmagenta;
+      }
+      header > div.box {
+        display: grid;
+        grid-template-columns: 350px repeat(3, 1fr);
+        gap: 30px;
+      }
+      header > div.box > div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-left: 20px;
+        border-radius: 10px;
+      }
+      header > div.box > div button {
+        background-color: #009f81;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+      }
+      section div.user {
+        display: grid;
+        grid-template-columns: 350px repeat(3, 1fr);
+        gap: 30px;
+      }
+      section div.user > div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-left: 20px;
+        border-radius: 10px;
+      }
+      article div.box {
+        margin-top: 50px;
+      }
+      article div.local {
+        display: grid;
+        grid-template-columns: 350px repeat(3, 1fr);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        gap: 30px;
+        padding: 15px;
+        margin-top: 30px;
+      }
+      article div.local > div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-left: 20px;
+        border-radius: 10px;
+      }
+      article button {
+        padding: 12px 35px;
+        border-radius: 10px;
+        border: 3px solid #2a9e82;
+        color: #2a9e82;
+        background-color: white;
+      }
+      article button:hover {
+        background-color: #06493dd0;
+        color: white;
+      }
+      article div.local2 {
+        display: grid;
+        grid-template-columns: 350px repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+        padding: 15px;
+      }
+      article div.local2 > div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-left: 20px;
+        border-radius: 10px;
+      }
+      article div.local3 {
+        display: grid;
+        grid-template-columns: 350px repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+        padding: 15px;
+      }
+      article div.local3 > div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-left: 20px;
+        border-radius: 10px;
+      }
+      div#box {
+        background-image: url("https://cdn.prod.website-files.com/63f5de8e8260819e3bbf4432/65700a5ec3c8d7009106e63d_google_pricing.png");
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+      }
+      div#box h1 {
+        font-size: 50px;
+        padding-top: 30px;
+        margin-left: 30px;
+      }
+      div#box p {
+        font-size:25px;
+        margin-left: 30px;
+        width: 450px;
+      }
+      div#box button {
+        margin-left: 30px;
+        padding: 15px 30px;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        border: none;
+        background-color: #009f81;
+      }
+      div.faq>select{
+          width: 100%;
+          height:80px;
+          font-size:20px;
+          font-weight: 600;
+          padding-left: 50px;
+          background-color: #fbf6d840;
+      }
+      div.last{
+        background-color: #e2bb08;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:30px;
+        margin-top:50px;
+      }
+      div#price{
+        font-size:50px;
+        font-weight:900;
+        margin-left: 100px;
+        text-align: center;
+        color:white;
+      }
+      div#price>h1{
+        margin:0px;
+        padding: 0px;
+      }
+      div.pricebox{
+        position: relative;
+      }
+      div.pricebox>div p{
+        position: absolute;
+        font-size:30px;
+        margin-top:60px;
+        width: 300px;
+        margin-left: 120px;
+        padding: 20px;
+        background-color:white;
+        border-radius: 20px;
+        /* display: none; */
+      }       
+      @media(width <=1000px){
+        header div.box,section div.user,article div.local{
+          grid-template-columns: repeat(3,1fr);
+          margin: auto;
         }
-        main h1{
-            font-size:50px;
+      }
+      @media(width <=750px){
+        header div.box,section div.user,article div.local{
+          grid-template-columns: repeat(2,1fr);
+          margin: auto;
         }
-        main h1:hover{
-            color: rgba(0, 0, 255, 0.578);
+      }
+      @media(width <=450px){
+        header div.box,section div.user,article div.local,article div.local2,article div.local3{
+          grid-template-columns: repeat(1,1fr);
+          margin: auto;
         }
+      }      
+      @media(width <=750px){
         main div.pay{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap:40px;
+          grid-template-columns: repeat(2,1fr);
+          margin: auto;
         }
-        main div.pay>div{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border-radius: 10px;
-            padding:30px;
+      }
+      @media(width <=450px){
+        main div.pay{
+          grid-template-columns: repeat(1,1fr);
+          margin: auto;
         }
-        main div.pay>div button{
-            width: 300px;
-            height: 45px;
-            background-color: #009f81;
-            color: white;
-            border-radius: 10px;
-            border: none;
-            font-size: 16px;
-            display: block;
-            margin: auto    ;
-        }
-        main div.pay>div button:hover{
-            background-color:#06493dd0;
-        }
-        main p{
-            font-size: 16px;
-        }
-        main p:hover{
-            color: red;
-        }
-        main li::marker{
-            color: green;
-        }
-        main li:hover{
-            color: darkmagenta;
-        }
-        header>div.box{
-            display: grid;
-            grid-template-columns:350px repeat(3,1fr);
-            gap:30px;
-            margin-top:80px;
-        }
-        header>div.box>div{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding-left:20px;
-            border-radius:10px;
-        }
-        header>div.box>div button{
-            background-color: #009f81;
-            color: white;
-            font-size: 16px;
-            padding:10px 20px ;
-            border: none;
-            border-radius: 10px;
-        }
-        section div.user{
-            display: grid;
-            grid-template-columns:350px repeat(3,1fr);
-            gap:30px;
-            margin-top:80px;
-        }
-        section div.user>div{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding-left:20px;
-            border-radius:10px;
-        }
-        article div.box{
-            margin-top: 50px;
-        }       
-        article div.local{
-            display: grid;
-            grid-template-columns:350px repeat(3,1fr);
-            gap:30px;
-        }
-        article div.local>div{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding-left:20px;
-            border-radius:10px;
-        }
-        article button{
-            padding: 12px 35px;
-            border-radius: 10px;
-            border: 3px solid #2a9e82;
-            color: #2a9e82;
-            background-color:white;
-        }
-        article button:hover{
-            background-color:#06493dd0 ;
-            color: white;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="box">
-            <h1>Plans & Pricing</h1>
-            <div class="pay">
-                <div>
-                    <h2>Pro</h2>
-                    <h1>Rs 139.95 <span style="font-size: 16px;">monthly</span></h1>
-                    <button>Try for free</button>
-                    <p>or <span style="color: red;">subscribe</span></p>
-                    <p>For newbies and small teams:</p>
-                    <ul>
-                        <li>5 projects</li>
-                        <li>500 keywords to track</li>
-                        <li>10,000 results per report</li>                        
-                    </ul>
-                    <p>SEO, PPC, and research tools:</p>
-                    <p style="color: rgba(0, 0, 0, 0.589);width: 300px;">Competitor analysis, keyword
-                        research, website audit, backlink
-                        analysis, advertising tools, and more</p>
-                </div>
-                <div>
-                    <h2>Guru</h2>
-                    <h1>Rs 249.95 <span style="font-size: 16px;">monthly</span></h1>
-                    <button>Try for free</button>
-                    <p>or <span style="color: red;">subscribe</span></p>
-                    <p>For agencies and mid-size businesses:</p>
-                    <ul>
-                        <li>15 projects</li>
-                        <li>1,500 keywords to track</li>
-                        <li>30,000 results per report</li>                        
-                    </ul>
-                    <p>All Pro features plus:</p>
-                    <p style="color: rgba(0, 0, 0, 0.589);width: 300px;">Content Marketing Toolkit, historical data, multi-location and device tracking, Looker Studio integration, and more</p>
-                </div>
-                <div>
-                    <h2>Business</h2>
-                    <h1>Rs499.95 <span style="font-size: 16px;">monthly</span></h1>
-                    <button>subscribe</button>
-                    <p>or <span style="color: red;">try a custom plan</span></p>
-                    <p>For large agencies and enterprises:</p>
-                    <ul>
-                        <li>40 projects</li>
-                        <li>5,000 keywords to track</li>
-                        <li>50,000 results per report</li>                        
-                    </ul>
-                    <p>All Guru features plus:</p>
-                    <p style="color: rgba(0, 0, 0, 0.589);width: 300px;">Share of Voice, extended limits, API access, PLA analytics, free migration from third-party tools, and more</p>
-                </div>
-            </div>
+      <div class="box">
+        <div id="top">
+          <h1>Plans & Pricing</h1>
         </div>
+        <div class="pay">
+          <div>
+            <h2>Pro</h2>
+            <h1>Rs 139.95 <span style="font-size: 16px">monthly</span></h1>
+            <button>Try for free</button>
+            <p>or <span style="color: red">subscribe</span></p>
+            <p>For newbies and small teams:</p>
+            <ul>
+              <li>5 projects</li>
+              <li>500 keywords to track</li>
+              <li>10,000 results per report</li>
+            </ul>
+            <p>SEO, PPC, and research tools:</p>
+            <p style="color: rgba(0, 0, 0, 0.589); width: 300px">
+              Competitor analysis, keyword research, website audit, backlink
+              analysis, advertising tools, and more
+            </p>
+          </div>
+          <div>
+            <h2>Guru</h2>
+            <h1>Rs 249.95 <span style="font-size: 16px">monthly</span></h1>
+            <button>Try for free</button>
+            <p>or <span style="color: red">subscribe</span></p>
+            <p>For agencies and mid-size businesses:</p>
+            <ul>
+              <li>15 projects</li>
+              <li>1,500 keywords to track</li>
+              <li>30,000 results per report</li>
+            </ul>
+            <p>All Pro features plus:</p>
+            <p style="color: rgba(0, 0, 0, 0.589); width: 300px">
+              Content Marketing Toolkit, historical data, multi-location and
+              device tracking, Looker Studio integration, and more
+            </p>
+          </div>
+          <div>
+            <h2>Business</h2>
+            <h1>Rs499.95 <span style="font-size: 16px">monthly</span></h1>
+            <button>subscribe</button>
+            <p>or <span style="color: red">try a custom plan</span></p>
+            <p>For large agencies and enterprises:</p>
+            <ul>
+              <li>40 projects</li>
+              <li>5,000 keywords to track</li>
+              <li>50,000 results per report</li>
+            </ul>
+            <p>All Guru features plus:</p>
+            <p style="color: rgba(0, 0, 0, 0.589); width: 300px">
+              Share of Voice, extended limits, API access, PLA analytics, free
+              migration from third-party tools, and more
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
+    <div class="box" style="padding-top: 10px">
+      <img style="width:100%;" src="https://static-web.upmetrics.co/wp-content/uploads/2021/04/16125203/ideal-business-planning-strategy.png"
+        alt=""
+      />
+    </div>
+
     <header>
-        <div class="box">
-            <div>
-                <h2>Compare Plans</h2>
-            </div>
-            <div>
-                <h3>Pro</h3>
-                <h2>Rs 139.95 <span style="font-size: 16px;">monthly</span></h2>
-                <button>Try for free</button>
-                <p>or <span style="color: red;">subscribe</span></p>
-            </div>
-            <div>
-                <h3>Guru</h3>
-                <h2>Rs 249.95 <span style="font-size: 16px;">monthly</span></h2>
-                <button>Try for free</button>
-                <p>or <span style="color: red;">subscribe</span></p>
-            </div>
-            <div>
-                <h3>Business</h3>
-                <h2>Rs499.95 <span style="font-size: 16px;">monthly</span></h2>
-                <button>subscribe</button>
-                <p>or <span style="color: red;">try a custom plan</span></p>
-            </div>
-            
-        </div>        
+      
+      <div class="box">
+        
+        <div>
+          <h2>Compare Plans</h2>
+        </div>
+        <div>
+          <h3>Pro</h3>
+          <h2>Rs 139.95 <span style="font-size: 16px">monthly</span></h2>
+          <button>Try for free</button>
+          <p>or <span style="color: red">subscribe</span></p>
+        </div>
+        <div>
+          <h3>Guru</h3>
+          <h2>Rs 249.95 <span style="font-size: 16px">monthly</span></h2>
+          <button>Try for free</button>
+          <p>or <span style="color: red">subscribe</span></p>
+        </div>
+        <div>
+          <h3>Business</h3>
+          <h2>Rs499.95 <span style="font-size: 16px">monthly</span></h2>
+          <button>subscribe</button>
+          <p>or <span style="color: red">try a custom plan</span></p>
+        </div>
+      </div>
+    
     </header>
 
     <section>
-        <div class="box">            
-            <div class="user">
-                <div>
-                    <h2>Additional users</h2>
-                    <p>As an account owner, you can add additional users with unique login credentials under your account — an efficient and secure way to organize teamwork in Semrush.</p>
-                </div>
-                <div>
-                    <p>+Rs.45/mo per user</p>
-                </div>
-                <div>
-                    <p>+Rs.80/mo per user</p>
-                </div>
-                <div>
-                    <p>+Rs.100/mo per user</p>
-                </div>
-            </div>
+      <div class="box">
+        <div style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 15px; margin-top: 30px;">
+        <div class="user">
+          <div>
+            <h2>Additional users</h2>
+            <p>
+              As an account owner, you can add additional users with unique
+              login credentials under your account — an efficient and secure way
+              to organize teamwork in Semrush.
+            </p>
+          </div>
+          <div>
+            <p>+Rs.45/mo per user</p>
+          </div>
+          <div>
+            <p>+Rs.80/mo per user</p>
+          </div>
+          <div>
+            <p>+Rs.100/mo per user</p>
+          </div>
         </div>
+      </div>
+      </div>
     </section>
 
     <article>
-        <div class="box">            
-            <div class="local">                
-                <div>
-                    <h2>Semrush Local</h2>                    
-                    <h4>Basic plan</h4>
-                    <p>Enhance your local visibility and be the top customer choice. Get your business accurately listed across the web with Listing Management and build an impeccable online reputation with Review Management.</p>
-                </div>
-                <div>
-                    <p>+Rs.20/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.20/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.20/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-                <div>                                        
-                    <h4>Premium plan</h4>
-                    <p>All basic features plus:</p>
-                    <ul>
-                        <li>Track Google Maps rankings with Map Rank Tracker</li>
-                        <li>Respond to Google reviews with AI suggestions</li>
-                        <li>Analyze competitor reviews</li>
-                    </ul>
-                </div>
-                <div>
-                    <p>+Rs.40/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.40/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.40/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-
-                <div>                                        
-                    <h2>Semrush .Trends</h2>
-                    <p>.Trends includes:</p>
-                    <ul>
-                        <li>Website mobile and desktop traffic data</li>
-                        <li>Key channels (Search, Ads, Email, etc.)</li>
-                        <li>Daily, weekly, monthly traffic data</li>
-                        <li>Daily, weekly, monthly traffic data</li>
-                        <li>24/7 competitor tracking</li>
-                    </ul>
-                </div>
-                <div>
-                    <p>+Rs.289/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.289/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.289/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-                <div>
-                    <h2>Semrush social</h2>                    
-                    <h4>Social Management</h4>
-                    <p>Manage multiple social media accounts with one subscription. Boost any brand's visibility and reputation. Get a 360º view of your and competitors' strategies with Semrush Social.</p>
-                </div>
-                <div>
-                    <p>+Rs.29.99/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.29.99/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.29.99/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-                <div>                                        
-                    <h4>Social Content AI</h4>
-                    <p>Transform your social media content production process with AI: unlimited social content ideas, copywriting, design, visual templates, and proofreading, all in one place.</p>
-                    
-                </div>
-                <div>
-                    <p>+Rs.29.99/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.29.99/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.29.99/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-                <div>
-                    <h2>Agency Growth Kit</h2>                    
-                    <h4>Start</h4>
-                    <p>Take your agency to the next level by getting inbound and outbound marketing leads, running projects with CRM, collaborating via Client Portals, and reporting progress with professional white-label PDF reports</p>
-                </div>
-                <div>
-                    <p>+Rs.69/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-                <!-- <div>                                        
-                    <h4>Scale</h4>
-                    <p>All Start features plus:</p>
-                    <ul>
-                        <li>Premium visibility on the Agency Partners platform</li>                        
-                        <li>Unlimited CRM</li>
-                    </ul>
-                </div>
-                <div>
-                    <p>+Rs.149/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.149/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-
-                <div>                                        
-                    <h4>Advanced</h4>
-                    <p>All scale features plus:</p>
-                    <ul>
-                        <li>Unlimited Client Portals</li>                        
-                        <li>Client Portals with your domain name</li>
-                    </ul>
-                </div>
-                <div>
-                    <p>+Rs.249/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.249/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.249/mo</p>
-                    <button>Buy now</button>
-                </div>
-
-                <div>                                        
-                    <h2>ImpactHero</h2>
-                    <p>ImpactHero is an AI tool that breaks down your content by buyer journey stages, detects the most impactful copy, and gives tips on reinforcing your efforts. The total price is calculated by the number of campaigns you buy.</p>
-                </div>
-                <div>
-                    <p>+Rs.200/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.200/mo</p>
-                    <button>Buy now</button>
-                </div>
-                <div>
-                    <p>+Rs.200/mo</p>
-                    <button>Buy now</button>
-                <div>
-                
+      <div class="box">
+        <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
+          <h2 style="padding-top: 15px; padding-left: 15px">Semrush local</h2>
+          <div class="local" style="box-shadow: none">
+            <div>
+              <h4>Basic plan</h4>
+              <p>
+                Enhance your local visibility and be the top customer choice.
+                Get your business accurately listed across the web with Listing
+                Management and build an impeccable online reputation with Review
+                Management.
+              </p>
             </div>
+            <div>
+              <p>+Rs.20/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.20/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.20/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
+
+          <div class="local" style="box-shadow: none">
+            <div>
+              <h4>Premium plan</h4>
+              <p>All basic features plus:</p>
+              <ul>
+                <li>Track Google Maps rankings with Map Rank Tracker</li>
+                <li>Respond to Google reviews with AI suggestions</li>
+                <li>Analyze competitor reviews</li>
+              </ul>
+            </div>
+            <div>
+              <p>+Rs.40/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.40/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.40/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
         </div>
+          <div class="local">
+            <div>
+              <h2>Semrush .Trends</h2>
+              <p>.Trends includes:</p>
+              <ul>
+                <li>Website mobile and desktop traffic data</li>
+                <li>Key channels (Search, Ads, Email, etc.)</li>
+                <li>Daily, weekly, monthly traffic data</li>
+                <li>Daily, weekly, monthly traffic data</li>
+                <li>24/7 competitor tracking</li>
+              </ul>
+            </div>
+            <div>
+              <p>+Rs.289/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.289/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.289/mo</p>
+              <button>Buy now</button>
+            
+          </div>
+        </div>
+        <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
+          <h2 style="padding-top: 15px; padding-left: 15px">Semrush social</h2>
+          <div class="local" style="box-shadow: none">
+            <div>
+              <h4>Social Management</h4>
+              <p>
+                Manage multiple social media accounts with one subscription.
+                Boost any brand's visibility and reputation. Get a 360º view of
+                your and competitors' strategies with Semrush Social.
+              </p>
+            </div>
+            <div>
+              <p>+Rs.29.99/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.29.99/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.29.99/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
+          <div class="local" style="box-shadow: none">
+            <div>
+              <h4>Social Content AI</h4>
+              <p>
+                Transform your social media content production process with AI:
+                unlimited social content ideas, copywriting, design, visual
+                templates, and proofreading, all in one place.
+              </p>
+            </div>
+            <div>
+              <p>+Rs.29.99/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.29.99/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.29.99/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
+        </div>
+        <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
+          <h2 style="padding-top: 15px; padding-left: 15px">
+            Agency Growth Kit
+          </h2>
+          <div class="local2">
+            <div>
+              <h4>Start</h4>
+              <p>
+                Take your agency to the next level by getting inbound and
+                outbound marketing leads, running projects with CRM,
+                collaborating via Client Portals, and reporting progress with
+                professional white-label PDF reports
+              </p>
+            </div>
+            <div>
+              <p>+Rs.69/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
+          <div class="local3">
+            <div>
+              <h4>Scale</h4>
+              <p>All Start features plus:</p>
+              <ul>
+                <li>Premium visibility on the Agency Partners platform</li>
+                <li>Unlimited CRM</li>
+              </ul>
+            </div>
+            <div>
+              <p>+Rs.149/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.149/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
+          <div class="local" style="box-shadow: none">
+            <div>
+              <h4>Advanced</h4>
+              <p>All scale features plus:</p>
+              <ul>
+                <li>Unlimited Client Portals</li>
+                <li>Client Portals with your domain name</li>
+              </ul>
+            </div>
+            <div>
+              <p>+Rs.249/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.249/mo</p>
+              <button>Buy now</button>
+            </div>
+            <div>
+              <p>+Rs.249/mo</p>
+              <button>Buy now</button>
+            </div>
+          </div>
+        </div>
+        <div class="local">
+          <div>
+            <h2>ImpactHero</h2>
+            <p>
+              ImpactHero is an AI tool that breaks down your content by buyer
+              journey stages, detects the most impactful copy, and gives tips on
+              reinforcing your efforts. The total price is calculated by the
+              number of campaigns you buy.
+            </p>
+          </div>
+          <div>
+            <p>+Rs.200/mo</p>
+            <button>Buy now</button>
+          </div>
+          <div>
+            <p>+Rs.200/mo</p>
+            <button>Buy now</button>
+          </div>
+          <div>
+            <p>+Rs.200/mo</p>
+            <button>Buy now</button>
+            <div></div>
+          </div>
+        </div>
+      </div>
     </article>
-</body>
-</html> -->
+
+    <div class="box">
+      <div id="box">
+        <h1>Playing big? Get a custom plan.</h1>
+        <p>
+          Haven't found a plan that covers everything you need? Contact us to
+          discuss a custom plan.
+        </p>
+        <button>Contact us</button>
+      </div>
+    </div>
+
+    <div class="box" style="margin-top:50px;">
+      <h1 style="font-size: 50px;">FAQ</h1>
+      <div class="faq">
+        <select name="faq" id="faq">
+          <option value="Can I cancel my subscription anytime?" >Can I cancel my subscription anytime?</option>
+          <option value="Yes, you can cancel your subscription, downgrade or upgrade your plan at any time.">Yes, you can cancel your subscription, downgrade or upgrade your plan at any time.</option>
+        </select>
+        <select name="f" id="f">
+          <option value="What is Semrush's refund policy?">What is Semrush's refund policy?</option>
+          <option value="You get a 7-day money-back guarantee on all plans. Submit your request via our contact form, and we will refund the payment
+          made if the request is made within 7 days after the sign-up.">You get a 7-day money-back guarantee on all plans. Submit your request via our contact form, and we will refund the payment
+          made if the request is made within 7 days after the sign-up.</option>
+        </select>
+        <select name="a" id="a">
+          <option value="What payment methods do you accept?">What payment methods do you accept?</option>
+          <option value="You can pay using the following payment methods:
+          · All major credit cards including Visa, Mastercard, Discover, American Express, and UnionPay
+          · Wire transfer (upon request)
+          . Check or money order (US only, upon request)">You can pay using the following payment methods:
+          · All major credit cards including Visa, Mastercard, Discover, American Express, and UnionPay
+          · Wire transfer (upon request)
+          . Check or money order (US only, upon request)</option>
+        </select>
+        <select name="q" id="q">
+          <option value="Do I get a customer demo?">Do I get a customer demo?</option>
+          <option value="Once you sign up for a Semrush free trial, request a free training session here. After your demo, you will be assigned a dedicated
+          point of contact for all of your Semrush-related questions.">Once you sign up for a Semrush free trial, request a free training session here. After your demo, you will be assigned a dedicated
+          point of contact for all of your Semrush-related questions.</option>
+        </select>
+        <select name="b" id="b">
+          <option value="Can I use Semrush for free?">Can I use Semrush for free?</option>
+          <option value="Yes. With a free account, you can still use a lot of tools, but you will be limited in your ability to pull all of the data and use other
+          tools. The maximum number of requests made to the Analytics reports per day is limited to only 10 (Pro users have access to
+          3,000 searches, Guru - 5,000 searches, Business - 10,000 searches). As a free user, you can create and manage only one
+          Project and track 10 keywords in Position Tracking. Discover more features we offer our free users and the comparison to our
+          paid plans in this article.">Yes. With a free account, you can still use a lot of tools, but you will be limited in your ability to pull all of the data and use other
+          tools. The maximum number of requests made to the Analytics reports per day is limited to only 10 (Pro users have access to
+          3,000 searches, Guru - 5,000 searches, Business - 10,000 searches). As a free user, you can create and manage only one
+          Project and track 10 keywords in Position Tracking. Discover more features we offer our free users and the comparison to our
+          paid plans in this article.</option>
+        </select>
+        <select name="c" id="c">
+          <option value="Am I charged when I enter my credit card?">Am I charged when I enter my credit card?</option>
+          <option value="We will charge a nominal amount to your credit card to check its validity; once confirmed, it will be immediately refunded. Until
+          your Semrush trial period ends you won't be charged.">We will charge a nominal amount to your credit card to check its validity; once confirmed, it will be immediately refunded. Until
+          your Semrush trial period ends you won't be charged.</option>
+        </select>
+        <select name="d" id="d">
+          <option value="Which would be better for me, Guru or Pro?">Which would be better for me, Guru or Pro?</option>
+          <option value="If you're a freelancer, blogger, or in-house marketer with a limited budget, then the Semrush Pro plan will likely be the best
+          option. If you're a professional SEO consultant or an agency with numerous clients, then you will be best suited to the Semrush
+          Guru plan.
+          
+          You can find a deep comparison of our plans by limits in the subscription limits article.">If you're a freelancer, blogger, or in-house marketer with a limited budget, then the Semrush Pro plan will likely be the best
+          option. If you're a professional SEO consultant or an agency with numerous clients, then you will be best suited to the Semrush
+          Guru plan.
+          
+          You can find a deep comparison of our plans by limits in the subscription limits article.</option>
+        </select>
+        <select name="e" id="e">
+          <option value="What is the pricing currency?">What is the pricing currency?</option>
+          <option value="All prices are in US dollars.">All prices are in US dollars.</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="last">
+
+        <div id="price">
+          <h1 >PRICING</h1>
+          <h1>HOW</h1>
+          <h1>WHY</h1>
+          <h1>WHAT</h1>
+        </div>
+
+        <div class="pricebox">
+          <div class="a"><p>An economic theory that
+            states that the price for a
+            specific good or service
+            is determined by the
+            relationship between its
+            supply and demand at any
+            given point.</p></div>
+          <div class="b"><p>A common classification
+            that began as the four Ps:
+            product, price, placement,
+            and promotion.</p></div>
+          <div class="c"><p>A mathematical model
+            that estimates the
+            expected return of an
+            investment based on its
+            riskiness relative to the rest
+            of the market.</p></div>
+          <div class="d"><p>A pricing strategy used by businesses to
+            charge products and services at a rate they
+            believe consumers are willing to pay.</p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
 
 
 

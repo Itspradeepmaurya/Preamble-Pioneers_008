@@ -9,6 +9,119 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        header {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(18px, 8vw, 14px);
+    padding: clamp(16px, 8vw, 12px);
+    
+  }
+  .navbar {
+    display: flex;
+    gap: clamp(100px, 6vw, 10px);
+    margin-top: 10px;
+  }
+  .navbar > a:hover {
+    color: grey;
+  }
+  nav > div:nth-of-type(4) {
+    display: flex;
+    gap: clamp(20px, 2vw, 5px);
+  }
+  nav > div:nth-of-type(4) > button {
+    border: 2px solid;
+    padding: 10px;
+    padding-inline: clamp(20px, 4vw, 5px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: clamp(10px, 8vw, 16px);
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(2){
+    background-color: #009f81;
+    border: none;
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(1):hover {
+    background-color: rgb(85, 85, 85);
+  }
+  nav > div:nth-of-type(4) > button:nth-of-type(2):hover {
+    background-color: #01705c;
+    border: none;
+  }
+  
+  .menu-icon {
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    display: none;
+  }
+  footer {
+    background-color: rgb(18, 19, 23);
+    color: grey;
+    position: relative;
+    bottom: 0px;
+  }
+  #foot {
+    display: grid;
+    grid-template-rows: 100px 400px 100px;
+  }
+  .upperfoot {
+    display: flex;
+    justify-content: space-around;
+  }
+  .leftupperfoot {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 5px;
+  }
+  .leftupperfoot > div {
+    padding: 5px 25px;
+    border-radius: 10px;
+  }
+  .rightupperfoot > button {
+    background-color: #009f81;
+    padding: 5px 55px;
+    border-radius: 10px;
+    color: white;
+  }
+  .rightupperfoot > button:hover {
+    background-color: #016e5a;
+  }
+  .rightupperfoot > p {
+    text-align: center;
+  }
+  .middlefoot {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 15px;
+  }
+  .middlefoot > div > p:nth-of-type(1) {
+    color: white;
+    font-size: 17px;
+  }
+  .middlefoot > div > p:hover {
+    color: white;
+  }
+  .low {
+    background-color: black;
+  }
+  .lowerfoot {
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+  }
+  .lowerfoot > p:hover {
+    color: white;
+  }
+
 
         body {
             font-family: "Inter", sans-serif;
@@ -226,10 +339,235 @@
                 font-size: 0.9em;
             }
         }
+
+        /* COMMENT FRESHHH */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+
+        .section-left {
+            height: 200px;
+        }
+
+        .section-left>p {
+            font-size: 63px;
+            font-weight: 600;
+            padding: 20px;
+            word-wrap: break-word;
+            width: 280px;
+
+        }
+
+        .section-right>p {
+            width: 450px;
+            margin-left: 300px;
+            font-size: 18px;
+        }
+
+        /* content start here  */
+        .container-2 {
+            width: 1000px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .box-1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            padding: 20px;
+        }
+
+        .box-1>.content-left>h3 {
+            word-wrap: break-word;
+            width: 120px;
+        }
+
+        .box-1>.content-left>p {
+            word-wrap: break-word;
+            width: 320px;
+        }
+
+        .content-left {
+            width: 450px;
+        }
+
+
+        /* COMMENT FRESHHH */
     </style>
 </head>
 
 <body>
+
+    <!-- comment FRESHHHH-->
+    <div class="container">
+        <div class="box">
+            <div class="section-left">
+                <p>Social Hub</p>
+
+            </div>
+            <div class="section-right">
+                <p>Start solving your marketing challenges today
+                    with 55+ tools and reports on Semrush.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-2">
+
+        <div class="auto">
+            <div class="box-1">
+                <div class="content-left">
+                    <h3>Keyword Research</h3>
+                    <p>Bring traffic to your site using the best keywords.</p>
+                </div>
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/08-service-consulting-services.png"
+                        alt="">
+                </div>
+
+
+            </div>
+            <div class="box-1">
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/02-service-media-planning-buying.png"
+                        alt="" style="margin-right: 100px;">
+                </div>
+                <div class="content-left" style="text-align: right; margin-left: ;">
+                    <h3 style="margin-left: 200px;">On Page SEO
+                    </h3>
+                    <p>Use best tactics to improve your site's health and SEO performance.</p>
+                </div>
+
+
+
+            </div>
+            <div class="box-1">
+                <div class="content-left">
+                    <h3>Competitor Analysis</h3>
+                    <p>Boost your performance by unpacking your competitors' online activity and weekly traffic trends.
+                    </p>
+                </div>
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/03-service-analytics-seo.png" alt="">
+                </div>
+
+
+            </div>
+            <div class="box-1">
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/04-service-branding-marketing-communications.png"
+                        alt="">
+                </div>
+                <div class="content-left" style="text-align: right;">
+                    <h3 style="margin-left: 200px;">Content
+                        Marketing</h3>
+                    <p>Develop a powerful content strategy with data-driven solutions.</p>
+                </div>
+
+
+
+            </div>
+            <div class="box-1">
+                <div class="content-left">
+                    <h3>Local SEO</h3>
+                    <p>Optimize your site for local searches to get more customers in your area.</p>
+                </div>
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/01-service-social-media-creative-srtategy.png"
+                        alt="">
+                </div>
+
+
+            </div>
+            <div class="box-1">
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/05-service-mobile-website-ui-ux.png"
+                        alt="">
+                </div>
+                <div class="content-left" style="text-align: right;">
+                    <h3 style="margin-left: 200px;">Market
+                        Analysis</h3>
+                    <p>Analyze your position and get ahead of the competition in a current or new market</p>
+                </div>
+
+
+
+            </div>
+            <!-- s -->
+            <div class="box-1">
+                <div class="content-left">
+                    <h3>Rank Tracking</h3>
+                    <p>Track daily changes of your target keywords in your target location.</p>
+                </div>
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/09-service-technology.png" alt="">
+                </div>
+
+
+            </div>
+            <div class="box-1">
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/06-service-influencer-management.png"
+                        alt="">
+                </div>
+                <div class="content-left" style="text-align: right;">
+                    <h3 style="margin-left: 200px;">Social Media
+                        Management</h3>
+                    <p>Increase your brand awareness with our social media posting and analytics platform</p>
+                </div>
+
+
+
+            </div>
+            <div class="box-1">
+                <div class="content-left">
+                    <h3>Link
+                        Building</h3>
+                    <p>Find unique opportunities to strengthen your backlink profile</p>
+                </div>
+                <div class="content right">
+                    <img src="https://socialpanga.com/wp-content/uploads/2021/04/07-service-videio-production.png"
+                        alt="">
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- comment FRESHHHH-->
     <div class="header-container">
         <div class="header">
             <h1>Social Hub</h1>
@@ -333,89 +671,218 @@
             <h3>Website Monetization</h3>
             <p>Monetize your audience with our powerful tools for bloggers, ad publishers and affliate managers</p>
             <button>Learn more</button>
-        </div>
-        <div class="card">
-            <h3>Paid Ads Management</h3>
-            <p>Set up, launch and optimize your paid ads campaigns directly through Semrush</p>
-            <button>Learn more</button>
-        </div>
-    </div>
-    <center>
-        <div class="purple">
-            <h1>Get it all in one with Social-Hub</h1>
-            <button>Get Free Trial</button>
+=======
+    <header>
+        <nav class="container">
+          <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+          <div style="width: 60px">
+            <img src="./SOCIAl.png" alt="logo" style="width: 100%" />
+          </div>
+          <div class="navbar">
+            <a href="./feature.html">Feature</a>
+            <a href="./Plans_&_Pricing.html">Pricing</a>
+            <a href="">Dashboard</a>
+            <a href="">Tools</a>
+          </div>
+          <div>
+            <button>
+              Log In</button
+            ><button>
+              Sign Up
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="header-container">
+            <div class="header">
+                <h1>Social Hub</h1>
+                <p>Start solving your marketing challenges today
+                    <br> with 55+ tools and reports on Semrush.
+                </p>
+                <button>Get Started For Free</button>
+            </div>
+            <div>
+                <img src="https://cdn.semrush.com/features/static/features/index/illustration.c4b3988bc6c1.svg">
+    
+            </div>
+    
 
         </div>
-    </center>
-    <div class="container">
-        <h1>All Tools</h1>
-        <div class="tools-grid">
-            <div class="tool-category">
-                <h2>SEO</h2>
-                <ul>
-                    <li>Backlink Analytics</li>
-                    <li>Backlink Audit Tool</li>
-                    <li>Backlink Gap</li>
-                    <li>Bulk Analysis</li>
-                    <li>Domain Overview</li>
-                    <li>Google Looker Studio connectors</li>
-                    <li>Keyword Gap</li>
-                    <li>Keyword Magic Tool</li>
-                    <li>Keyword Overview</li>
-                    <li>Link Building Tool</li>
-                    <li>Listing Management</li>
-                    <li>Log File Analyzer</li>
-                    <li>My Reports</li>
-                    <li>On Page SEO checker</li>
-                    <li>Organic Research</li>
-                    <li>Organic Traffic Insights</li>
-                    <li>Position Tracking</li>
-                    <li>Ranks</li>
-                    <li>Sensor</li>
-                    <li>Site Audit</li>
-                </ul>
+    
+        <div class="category container">
+            <button>All</button>
+            <button>SEO</button>
+            <button>Content</button>
+            <button>Market Research</button>
+            <button>Advertising</button>
+            <button>Social Media</button>
+        </div>
+        <div class="features container">
+            <div class="card">
+                <h3>Keyword Research</h3>
+                <p>Bring traffic to your site using the best keywords</p>
+                <button>Learn more</button>
             </div>
-            <div class="tool-category">
-                <h2>Content</h2>
-                <ul>
-                    <li>SEO Content Template</li>
-                    <li>SEO Writing Assistant</li>
-                    <li>Topic Research</li>
-                    <li>Readability Checker</li>
-                    <li>Rephraser Tool</li>
-                </ul>
+            <div class="card">
+                <h3>On-page SEO</h3>
+                <p>Use best tactics to improve your site's health and SEO performance</p>
+                <button>Learn more</button>
             </div>
-            <div class="tool-category">
-                <h2>Advertising</h2>
-                <ul>
-                    <li>Advertising Research</li>
-                    <li>PLA Research</li>
-                    <li>PPC Keyword tool</li>
-                </ul>
+            <div class="card">
+                <h3>Competitor Analysis</h3>
+                <p>Boost your performance by unpacking your competitors' online activity and weekly traffic trends</p>
+                <button>Learn more</button>
             </div>
-            <div class="tool-category">
-                <h2>Competitive Research</h2>
-                <ul>
-                    <li>Market Explorer</li>
-                    <li>Traffic Analytics</li>
-                </ul>
+            <div class="card">
+                <h3>Content Marketing</h3>
+                <p> Develop a powerful content strategy with data-driven solutions</p>
+                <button>Learn more</button>
             </div>
-            <div class="tool-category">
-                <h2>Agency Growth Kit</h2>
-                <ul>
-                    <li>Agency Partners Platform</li>
-                    <li>Client Portal</li>
-                    <li>CRM</li>
-                </ul>
+            <div class="card">
+                <h3>Local SEO</h3>
+                <p> Optimize your site for local searches to get more customers in your area</p>
+                <button>Learn more</button>
             </div>
-            <div class="tool-category">
-                <h2>Social Media</h2>
-                <ul>
-                    <li>Social Media Tools</li>
-                </ul>
+            <div class="card">
+                <h3>Rank Tracking</h3>
+                <p> Track daily changes of your target keywords in your target location</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Social Media Management</h3>
+                <p> Increase your brand awareness with our social media posting and analytics platform</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Link Building</h3>
+                <p>Find unique opportunities to strengthen your backlink profile </p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Competitor SEO Analysis</h3>
+                <p>Find all of the keywords and content in your competitor's strategy</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Content Creation and Distribution</h3>
+                <p>Create and share traffic-driving articles that make your target audience take action</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Content Optimization</h3>
+                <p> Drive more organic traffic with personalized recommendations to optimize your content</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Market Analysis</h3>
+                <p>Analyze your position and get ahead of the competition in a current or new market</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Paid Advertising</h3>
+                <p>See the paid keywords and ad copy from your competitor's PPc ads to craft a winning strategy</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Competitor PR Monitoring </h3>
+                <p>Track your rival's online mentions and social media presence to build your brand's reputation</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>PPC Keyword Research</h3>
+                <p>Build your perfect paid search campaign with our keyword research tools</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Website Monetization</h3>
+                <p>Monetize your audience with our powerful tools for bloggers, ad publishers and affliate managers</p>
+                <button>Learn more</button>
+            </div>
+            <div class="card">
+                <h3>Paid Ads Management</h3>
+                <p>Set up, launch and optimize your paid ads campaigns directly through Semrush</p>
+                <button>Learn more</button>
             </div>
         </div>
-    </div>
+        <div>
+            <div class="purple">
+                <h1>Get it all in one with Social-Hub</h1>
+                <button>Get Free Trial</button>
+    
+            </div>
+        </div>
+        <div class="container">
+            <h1>All Tools</h1>
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h2>SEO</h2>
+                    <ul>
+                        <li>Backlink Analytics</li>
+                        <li>Backlink Audit Tool</li>
+                        <li>Backlink Gap</li>
+                        <li>Bulk Analysis</li>
+                        <li>Domain Overview</li>
+                        <li>Google Looker Studio connectors</li>
+                        <li>Keyword Gap</li>
+                        <li>Keyword Magic Tool</li>
+                        <li>Keyword Overview</li>
+                        <li>Link Building Tool</li>
+                        <li>Listing Management</li>
+                        <li>Log File Analyzer</li>
+                        <li>My Reports</li>
+                        <li>On Page SEO checker</li>
+                        <li>Organic Research</li>
+                        <li>Organic Traffic Insights</li>
+                        <li>Position Tracking</li>
+                        <li>Ranks</li>
+                        <li>Sensor</li>
+                        <li>Site Audit</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h2>Content</h2>
+                    <ul>
+                        <li>SEO Content Template</li>
+                        <li>SEO Writing Assistant</li>
+                        <li>Topic Research</li>
+                        <li>Readability Checker</li>
+                        <li>Rephraser Tool</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h2>Advertising</h2>
+                    <ul>
+                        <li>Advertising Research</li>
+                        <li>PLA Research</li>
+                        <li>PPC Keyword tool</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h2>Competitive Research</h2>
+                    <ul>
+                        <li>Market Explorer</li>
+                        <li>Traffic Analytics</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h2>Agency Growth Kit</h2>
+                    <ul>
+                        <li>Agency Partners Platform</li>
+                        <li>Client Portal</li>
+                        <li>CRM</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <h2>Social Media</h2>
+                    <ul>
+                        <li>Social Media Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </main>
+    
 
 </body>
 

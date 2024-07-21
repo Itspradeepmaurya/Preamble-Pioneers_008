@@ -6,6 +6,155 @@
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      .container {
+  max-width: 1500px;
+  margin: auto;
+  font-family: Montserrat, sans-serif;
+}
+header {
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  transition: background-color 0.3s ease, padding 0.3s;
+  background-color: rgb(255, 217, 0);
+}
+header.scrolled {
+  background-color: #29b960;
+  padding: 5px 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(18px, 8vw, 14px);
+  /* padding: clamp(15px, 8vw, 12px); */
+}
+nav > div:nth-of-type(2) {
+  display: grid;
+  place-items: center;
+  width: 100px;
+}
+.navbar {
+  display: inline-flex;
+  gap: clamp(50px, 6vw, 10px);
+  margin-inline: 15%;
+  
+}
+.navbar > div {
+  display: grid;
+  place-items: center;
+  
+}
+.navbar > div > a{
+    color: black;
+    text-decoration: none;
+}
+.navbar > div > a:hover {
+  color: rgb(107, 107, 107);
+}
+
+nav > div:nth-of-type(4) {
+  display: flex;
+  gap: clamp(20px, 2vw, 5px);
+}
+nav > div:nth-of-type(4) > button {
+  padding: 10px;
+  padding-inline: clamp(20px, 4vw, 5px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: clamp(10px, 8vw, 16px);
+  gap: 10px;
+  margin-left: 10px;
+  background-color: rgb(112, 186, 0);
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav > div:nth-of-type(4) > button:nth-of-type(1):hover , nav > div:nth-of-type(4) > button:nth-of-type(2):hover {
+  background-color: green;
+  transform: scale(1.1);
+  border: none;
+}
+
+.menu-icon {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  display: none;
+}
+footer {
+  background-color: rgb(247, 209, 0);
+  color: black;
+  position: relative;
+  font-weight: 700;
+  height: 700px;
+  padding-top: 20px;
+  margin-top: 100px;
+}
+
+#foot {
+  display: grid;
+  grid-template-rows: 100px 400px 100px;
+}
+.upperfoot {
+  display: flex;
+  justify-content: space-around;
+  gap: 20%;
+}
+.leftupperfoot {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 5px;
+}
+.leftupperfoot > div {
+  padding: 5px 25px;
+  border-radius: 10px;
+ 
+}
+.rightupperfoot > button {
+  background-color: greenyellow;
+  border-radius: 10px;
+  color: black;
+  font-size: 16px;
+  padding: 15px 40px;
+}
+.rightupperfoot > button:hover {
+  background-color: green;
+}
+.rightupperfoot > p {
+  text-align: center;
+}
+.middlefoot {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+
+}
+
+.middlefoot > div > p:nth-of-type(1) {
+  color: white;
+  font-size: 17px;
+}
+.middlefoot > div > p:hover {
+  color: white;
+}
+.low {
+  background-color: rgb(255, 217, 0);
+}
+.lowerfoot {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  gap: 20%;
+}
+.lowerfoot > p:hover {
+  color: white;
+}
+
       body {
         margin: auto;
         padding: 0px;
@@ -23,7 +172,9 @@
         background-size: cover;
         height: 100px;
         padding: 10px 20px 20px 0px;
-        margin-bottom: 10px;
+
+        margin: 50px 0px;
+
       }
       main h1 {
         font-size: 50px;
@@ -44,7 +195,7 @@
       main div.pay > div button {
         width: 300px;
         height: 45px;
-        background-color: #009f81;
+        background-color: rgb(112, 186, 0);
         color: white;
         border-radius: 10px;
         border: none;
@@ -53,7 +204,8 @@
         margin: auto;
       }
       main div.pay > div button:hover {
-        background-color: #06493dd0;
+        background-color: green;
+
       }
       main p {
         font-size: 16px;
@@ -67,18 +219,25 @@
       main li:hover {
         color: darkmagenta;
       }
-      header > div.box {
+
+       #ideaimage:hover {
+        transition: transform 1s ease-in-out;
+        transform: scale(0.8);
+      }
+      section > div.box {
         display: grid;
         grid-template-columns: 350px repeat(3, 1fr);
         gap: 30px;
+      
       }
-      header > div.box > div {
+      section > div.box > div {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding-left: 20px;
         border-radius: 10px;
       }
-      header > div.box > div button {
-        background-color: #009f81;
+
+      section > div.box > div button {
+        background-color: rgb(112, 186, 0);
         color: white;
         font-size: 16px;
         padding: 10px 20px;
@@ -89,6 +248,8 @@
         display: grid;
         grid-template-columns: 350px repeat(3, 1fr);
         gap: 30px;
+
+
       }
       section div.user > div {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -119,7 +280,9 @@
         background-color: white;
       }
       article button:hover {
-        background-color: #06493dd0;
+
+        background-color: green;
+
         color: white;
       }
       article div.local2 {
@@ -169,7 +332,9 @@
         color: white;
         font-size: 16px;
         border: none;
-        background-color: #009f81;
+
+        background-color: rgb(112, 186, 0);
+
       }
       div.faq>select{
           width: 100%;
@@ -185,6 +350,8 @@
         grid-template-columns: repeat(2,1fr);
         gap:30px;
         margin-top:50px;
+        height: 450px;
+
       }
       div#price{
         font-size:50px;
@@ -195,43 +362,55 @@
       }
       div#price>h1{
         margin:0px;
-        padding: 0px;
+
+        padding: 20px;
+
+
       }
       div.pricebox{
         position: relative;
       }
       div.pricebox>div p{
-        position: absolute;
+        /* position: absolute; */
         font-size:30px;
         margin-top:60px;
         width: 300px;
-        margin-left: 120px;
+        text-align: center;
+        margin-left: 25%;
         padding: 20px;
         background-color:white;
         border-radius: 20px;
         /* display: none; */
-      }       
+
+      }    
+      .grow:hover {
+  transition: transform .5s ease;
+  transform: scale3d(1.15, 1.15, 1.5);
+}   
       @media(width <=1000px){
-        header div.box,section div.user,article div.local{
+        section div.box,section div.user,article div.local{
           grid-template-columns: repeat(3,1fr);
           margin: auto;
         }
       }
       @media(width <=750px){
-        header div.box,section div.user,article div.local{
+
+        section div.box,section div.user,article div.local{
+
           grid-template-columns: repeat(2,1fr);
           margin: auto;
         }
       }
       @media(width <=450px){
-        header div.box,section div.user,article div.local,article div.local2,article div.local3{
+
+        section div.box,section div.user,article div.local,article div.local2,article div.local3{
           grid-template-columns: repeat(1,1fr);
           margin: auto;
         }
       }      
       @media(width <=750px){
         main div.pay{
-          grid-template-columns: repeat(2,1fr);
+          grid-template-columns: repeat(1,1fr);
           margin: auto;
         }
       }
@@ -241,16 +420,138 @@
           margin: auto;
         }
       }
+      @media (781px <= width <= 1024px) {
+        header > nav {
+          position: relative;
+        }
+        .menu-icon {
+          padding: 10px 15px;
+          margin: 10px;
+          font-size: 20px;
+          display: block;
+          border-radius: 10px;
+          background-color: rgb(255, 217, 0);
+        }
+        .navbar {
+          display: none;
+        }
+        .menu-icon:active ~ .navbar {
+          display: grid;
+          background-color: rgb(247, 209, 0);
+          gap: 30px;
+          position: absolute;
+          top: 70px;
+          width: 150px;
+          padding: 10px;
+          border: 2px solid;
+          left: -160px;
+        }
+        .menu-icon {
+          cursor: pointer;
+        }
+        #foot {
+          display: grid;
+          grid-template-rows: 100px 400px 100px;
+          font-size: 10px;
+        }
+       div.last { 
+        display:flex;
+        flex-direction: column;
+        height: 1000px;
+       }
+      }
+      @media (150px <= width <= 780px) {
+        header > nav {
+          position: relative;
+        }
+        .menu-icon {
+          padding: 10px 15px;
+          margin: 10px;
+          font-size: 20px;
+          display: block;
+          border-radius: 10px;
+          background-color: rgb(255, 217, 0);
+        }
+        .navbar {
+          display: none;
+        }
+        .menu-icon:active ~ .navbar {
+          display: grid;
+          background-color: rgb(247, 209, 0);
+          gap: 30px;
+          position: absolute;
+          top: 70px;
+          width: 150px;
+          padding: 10px;
+          border: 2px solid;
+          left: -160px;
+        }
+        .menu-icon {
+          cursor: pointer;
+        }
+        footer {
+          height: 400px;
+          font-size: 12px;
+        }
+        .upperfoot {
+          display: flex;
+          flex-direction: column;
+          height: 200px;
+        }
+        .rightupperfoot > button {
+          margin-left: 25%;
+        }
+        .middlefoot {
+          display: none;
+        }
+        .lowerfoot {
+          position: relative;
+          top: 100px;
+          bottom: 0px;
+          background-color: rgb(247, 209, 0);
+        }
+        .low {
+          height: 50px;
+          position: relative;
+          top: 100px;
+          background-color: rgb(247, 209, 0);
+        }
+        div.last { 
+        display:flex;
+        flex-direction: column;
+        height: 900px;
+       }
+      }
+     
     </style>
+    <script src="https://kit.fontawesome.com/91a6d2fe0f.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <header>
+        <nav class="container">
+          <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+          <div style="width: clamp(200px,150px,100px)">
+            <img
+              src="https://socialpanga.com/wp-content/uploads/2021/07/SocialPanga-Logo.svg"
+              alt="logo"
+              style="width: 100%"
+            />
+          </div>
+          <div class="navbar">
+            <div><a href="./home.html">Home</a></div>
+            <div><a href="./feature.html">Feature</a></div>
+            <div><a href="./Plans_&_Pricing.html">Pricing</a></div>
+          </div>
+          <div><button class="primarybutton">Log In</button><button class="primarybutton">Sign Up</button></div>
+        </nav>
+      </header>
     <main>
       <div class="box">
         <div id="top">
           <h1>Plans & Pricing</h1>
         </div>
         <div class="pay">
-          <div>
+          <div  class="grow">
             <h2>Pro</h2>
             <h1>Rs 139.95 <span style="font-size: 16px">monthly</span></h1>
             <button>Try for free</button>
@@ -267,7 +568,7 @@
               analysis, advertising tools, and more
             </p>
           </div>
-          <div>
+          <div class="grow">
             <h2>Guru</h2>
             <h1>Rs 249.95 <span style="font-size: 16px">monthly</span></h1>
             <button>Try for free</button>
@@ -284,7 +585,7 @@
               device tracking, Looker Studio integration, and more
             </p>
           </div>
-          <div>
+          <div class="grow">
             <h2>Business</h2>
             <h1>Rs499.95 <span style="font-size: 16px">monthly</span></h1>
             <button>subscribe</button>
@@ -303,34 +604,36 @@
           </div>
         </div>
       </div>
-    </main>
+   
 
-    <div class="box" style="padding-top: 10px">
+    <div class="box" style="padding: 100px 0px;" id="ideaimage" >
+
       <img style="width:100%;" src="https://static-web.upmetrics.co/wp-content/uploads/2021/04/16125203/ideal-business-planning-strategy.png"
         alt=""
       />
     </div>
 
-    <header>
+
+    <section>
       
       <div class="box">
         
-        <div>
+        <div class="grow">
           <h2>Compare Plans</h2>
         </div>
-        <div>
+        <div class="grow">
           <h3>Pro</h3>
           <h2>Rs 139.95 <span style="font-size: 16px">monthly</span></h2>
           <button>Try for free</button>
           <p>or <span style="color: red">subscribe</span></p>
         </div>
-        <div>
+        <div class="grow">
           <h3>Guru</h3>
           <h2>Rs 249.95 <span style="font-size: 16px">monthly</span></h2>
           <button>Try for free</button>
           <p>or <span style="color: red">subscribe</span></p>
         </div>
-        <div>
+        <div class="grow"> 
           <h3>Business</h3>
           <h2>Rs499.95 <span style="font-size: 16px">monthly</span></h2>
           <button>subscribe</button>
@@ -338,40 +641,16 @@
         </div>
       </div>
     
-    </header>
-
-    <section>
-      <div class="box">
-        <div style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 15px; margin-top: 30px;">
-        <div class="user">
-          <div>
-            <h2>Additional users</h2>
-            <p>
-              As an account owner, you can add additional users with unique
-              login credentials under your account — an efficient and secure way
-              to organize teamwork in Semrush.
-            </p>
-          </div>
-          <div>
-            <p>+Rs.45/mo per user</p>
-          </div>
-          <div>
-            <p>+Rs.80/mo per user</p>
-          </div>
-          <div>
-            <p>+Rs.100/mo per user</p>
-          </div>
-        </div>
-      </div>
-      </div>
     </section>
+
+    
 
     <article>
       <div class="box">
         <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
           <h2 style="padding-top: 15px; padding-left: 15px">Semrush local</h2>
           <div class="local" style="box-shadow: none">
-            <div>
+            <div class="grow">
               <h4>Basic plan</h4>
               <p>
                 Enhance your local visibility and be the top customer choice.
@@ -380,22 +659,22 @@
                 Management.
               </p>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.20/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.20/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.20/mo</p>
               <button>Buy now</button>
             </div>
           </div>
 
           <div class="local" style="box-shadow: none">
-            <div>
+            <div class="grow">
               <h4>Premium plan</h4>
               <p>All basic features plus:</p>
               <ul>
@@ -404,22 +683,22 @@
                 <li>Analyze competitor reviews</li>
               </ul>
             </div>
-            <div>
+            <div class="grow"> 
               <p>+Rs.40/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.40/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.40/mo</p>
               <button>Buy now</button>
             </div>
           </div>
         </div>
           <div class="local">
-            <div>
+            <div class="grow">
               <h2>Semrush .Trends</h2>
               <p>.Trends includes:</p>
               <ul>
@@ -430,15 +709,16 @@
                 <li>24/7 competitor tracking</li>
               </ul>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.289/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.289/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
+
               <p>+Rs.289/mo</p>
               <button>Buy now</button>
             
@@ -447,7 +727,9 @@
         <div class="start" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px">
           <h2 style="padding-top: 15px; padding-left: 15px">Semrush social</h2>
           <div class="local" style="box-shadow: none">
-            <div>
+
+            <div class="grow">
+
               <h4>Social Management</h4>
               <p>
                 Manage multiple social media accounts with one subscription.
@@ -455,21 +737,25 @@
                 your and competitors' strategies with Semrush Social.
               </p>
             </div>
-            <div>
+
+            <div class="grow">
               <p>+Rs.29.99/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.29.99/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow"> 
+
               <p>+Rs.29.99/mo</p>
               <button>Buy now</button>
             </div>
           </div>
           <div class="local" style="box-shadow: none">
-            <div>
+
+            <div class="grow">
+
               <h4>Social Content AI</h4>
               <p>
                 Transform your social media content production process with AI:
@@ -477,15 +763,17 @@
                 templates, and proofreading, all in one place.
               </p>
             </div>
-            <div>
+
+            <div class="grow">
               <p>+Rs.29.99/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.29.99/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
+
               <p>+Rs.29.99/mo</p>
               <button>Buy now</button>
             </div>
@@ -496,7 +784,9 @@
             Agency Growth Kit
           </h2>
           <div class="local2">
-            <div>
+
+            <div class="grow">
+
               <h4>Start</h4>
               <p>
                 Take your agency to the next level by getting inbound and
@@ -505,13 +795,17 @@
                 professional white-label PDF reports
               </p>
             </div>
-            <div>
+
+            <div class="grow">
+
               <p>+Rs.69/mo</p>
               <button>Buy now</button>
             </div>
           </div>
           <div class="local3">
-            <div>
+
+            <div class="grow">
+
               <h4>Scale</h4>
               <p>All Start features plus:</p>
               <ul>
@@ -519,17 +813,16 @@
                 <li>Unlimited CRM</li>
               </ul>
             </div>
-            <div>
+
+            <div class="grow">
               <p>+Rs.149/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
-              <p>+Rs.149/mo</p>
-              <button>Buy now</button>
-            </div>
+           
           </div>
           <div class="local" style="box-shadow: none">
-            <div>
+            <div class="grow">
+
               <h4>Advanced</h4>
               <p>All scale features plus:</p>
               <ul>
@@ -537,22 +830,24 @@
                 <li>Client Portals with your domain name</li>
               </ul>
             </div>
-            <div>
+
+            <div class="grow">
+
               <p>+Rs.249/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.249/mo</p>
               <button>Buy now</button>
             </div>
-            <div>
+            <div class="grow">
               <p>+Rs.249/mo</p>
               <button>Buy now</button>
             </div>
           </div>
         </div>
         <div class="local">
-          <div>
+          <div class="grow">
             <h2>ImpactHero</h2>
             <p>
               ImpactHero is an AI tool that breaks down your content by buyer
@@ -561,15 +856,16 @@
               number of campaigns you buy.
             </p>
           </div>
-          <div>
+          <div class="grow">
             <p>+Rs.200/mo</p>
             <button>Buy now</button>
           </div>
-          <div>
+          <div class="grow"> 
             <p>+Rs.200/mo</p>
             <button>Buy now</button>
           </div>
-          <div>
+
+          <div class="grow">
             <p>+Rs.200/mo</p>
             <button>Buy now</button>
             <div></div>
@@ -655,8 +951,10 @@
       </div>
     </div>
 
-    <div class="box">
-      <div class="last">
+
+    <div class="" style="background-color: #e2bb08;">
+      <div class="container last">
+
 
         <div id="price">
           <h1 >PRICING</h1>
@@ -665,7 +963,9 @@
           <h1>WHAT</h1>
         </div>
 
-        <div class="pricebox">
+
+        <div class="pricebox grow">
+
           <div class="a"><p>An economic theory that
             states that the price for a
             specific good or service
@@ -673,21 +973,94 @@
             relationship between its
             supply and demand at any
             given point.</p></div>
-          <div class="b"><p>A common classification
-            that began as the four Ps:
-            product, price, placement,
-            and promotion.</p></div>
-          <div class="c"><p>A mathematical model
-            that estimates the
-            expected return of an
-            investment based on its
-            riskiness relative to the rest
-            of the market.</p></div>
-          <div class="d"><p>A pricing strategy used by businesses to
-            charge products and services at a rate they
-            believe consumers are willing to pay.</p></div>
+
         </div>
       </div>
     </div>
+</main>
+<footer>
+    <section id="foot" class="">
+      <div class="upperfoot container">
+        <div class="leftupperfoot">
+          <div><i class="fa-regular fa-envelope"></i> Contact us</div>
+          <p>20, 1st Floor, 3rd Cross, Jambu Nagar, Bengaluru, Karnataka</p>
+        </div>
+        <div class="rightupperfoot">
+          <button>Get started with Social Metric!</button>
+          <p>or see our plans & pricing</p>
+        </div>
+      </div>
+      <div class="middlefoot container">
+        <div>
+          <p>SOCIALMETRICS</p>
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Success Stories</p>
+          <p>Stats and Facts</p>
+          <p>Insights</p>
+          <p>News</p>
+        </div>
+        <div>
+          <p>COMMUNITY</p>
+          <p>Social Metric Blog</p>
+          <p>Webinars</p>
+        </div>
+        <div>
+          <p>MORE TOOLS</p>
+          <p>Analytics Reports</p>
+          <p>Projects</p>
+          <p>Agency Partners</p>
+          <p>Affiliate Program</p>
+          <p>SEOquake</p>
+          <p>Sensor</p>
+          <p>Prowly</p>
+          <p>Kompyte</p>
+          <p>App Center</p>
+          <p>Enterprise SEO</p>
+          <p>Free Tools</p>
+        </div>
+        <div>
+          <p>COMPANY</p>
+          <p>About Us</p>
+          <p>Newsroom</p>
+          <p>Careers</p>
+          <p>Partners</p>
+          <p>Legal Info</p>
+          <p>Privacy Policy</p>
+          <p>Cookie Settings</p>
+          <p>Do not sell my personal info</p>
+          <p>Security Info</p>
+          <p>For Investors</p>
+          <p>Social Metric Select</p>
+          <p>Global Issues Index</p>
+          <p>Contact Us</p>
+        </div>
+        <div>
+          <p>FOLLOW US</p>
+          <p>X (Twitter)</p>
+          <p>Facebook</p>
+          <p>Linkedln</p>
+          <p>Instagram</p>
+          <p>YouTube</p>
+          <p>Pinterest</p>
+        </div>
+        <div>
+          <p>HELP</p>
+          <p>Knowledge Base</p>
+          <p>Academy</p>
+          <p>Social Metric API</p>
+        </div>
+      </div>
+      <div class="low" style="">
+        <div class="lowerfoot container">
+          <div style="width: 200px;">
+            <img src="https://socialpanga.com/wp-content/uploads/2021/07/SocialPanga-Logo.svg" alt="logo" style="width: 100%" />
+          </div>
+          <p>&copy; 2008 - 2024 Social Metric. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+
   </body>
 </html>

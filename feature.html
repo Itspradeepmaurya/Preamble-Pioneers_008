@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Hub</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+      .container {
+        max-width: 1500px;
+        margin: auto;
+        font-family: Montserrat, sans-serif;
+      }
+      header {
+        background-color: white;
+        color: black;
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+        transition: background-color 0.3s ease, padding 0.3s;
+        background-color: rgb(255, 217, 0);
+      }
+      header.scrolled {
+        background-color: #29b960;
+        padding: 5px 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: clamp(18px, 8vw, 14px);
+        /* padding: clamp(15px, 8vw, 12px); */
+      }
+      nav > div:nth-of-type(2) {
+        display: grid;
+        place-items: center;
+        width: 100px;
+      }
+      .navbar {
+        display: inline-flex;
+        gap: clamp(50px, 6vw, 10px);
+        margin-inline: 15%;
+      }
+      .navbar > div {
+        display: grid;
+        place-items: center;
+      }
+      .navbar > div > a {
+        color: black;
+        text-decoration: none;
+      }
+      .navbar > div > a:hover {
+        color: rgb(107, 107, 107);
+      }
+
+      nav > div:nth-of-type(4) {
+        display: flex;
+        gap: clamp(20px, 2vw, 5px);
+      }
+      nav > div:nth-of-type(4) > button {
+        padding: 10px;
+        padding-inline: clamp(20px, 4vw, 5px);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-size: clamp(10px, 8vw, 16px);
+        gap: 10px;
+        margin-left: 10px;
+        background-color: rgb(112, 186, 0);
+        border: none;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      nav > div:nth-of-type(4) > button:nth-of-type(1):hover,
+      nav > div:nth-of-type(4) > button:nth-of-type(2):hover {
+        background-color: green;
+        transform: scale(1.1);
+        border: none;
+      }
+
+      .menu-icon {
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        display: none;
+      }
+      footer {
+        background-color: rgb(247, 209, 0);
+        color: black;
+        position: relative;
+        font-weight: 700;
+        height: 700px;
+      }
+
+      #foot {
+        display: grid;
+        grid-template-rows: 100px 400px 100px;
+      }
+      .upperfoot {
+        display: flex;
+        justify-content: space-around;
+        gap: 20%;
+      }
+      .leftupperfoot {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding-top: 5px;
+      }
+      .leftupperfoot > div {
+        padding: 5px 25px;
+        border-radius: 10px;
+      }
+      .rightupperfoot > button {
+        background-color: greenyellow;
+        border-radius: 10px;
+        color: black;
+        font-size: 16px;
+        padding: 15px 40px;
+      }
+      .rightupperfoot > button:hover {
+        background-color: green;
+  transition: transform .5s ease;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+      
+      .rightupperfoot > p {
+        text-align: center;
+      }
+      .middlefoot {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .middlefoot > div > p:nth-of-type(1) {
+        color: white;
+        font-size: 17px;
+      }
+      .middlefoot > div > p:hover {
+        color: white;
+      }
+      .low {
+        background-color: rgb(255, 217, 0);
+      }
+      .lowerfoot {
+        display: flex;
+        justify-content: space-around;
+        place-items: center;
+        gap: 20%;
+      }
+      .lowerfoot > p:hover {
+        color: white;
+      }
+      .card2:hover , .content-right:hover {
+  transition: transform .5s ease;
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+      * {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(#dbd3ae5f, white, #e9c2005e, white);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      @media (781px <= width <= 1024px) {
+        header > nav {
+          position: relative;
+        }
+        .menu-icon {
+          padding: 10px 15px;
+          margin: 10px;
+          font-size: 20px;
+          display: block;
+          border-radius: 10px;
+          background-color: rgb(255, 217, 0);
+        }
+        .navbar {
+          display: none;
+        }
+        .menu-icon:active ~ .navbar {
+          display: grid;
+          background-color: rgb(247, 209, 0);
+          gap: 30px;
+          position: absolute;
+          top: 70px;
+          width: 150px;
+          padding: 10px;
+          border: 2px solid;
+          left: -160px;
+        }
+        .menu-icon {
+          cursor: pointer;
+        }
+        #foot {
+          display: grid;
+          grid-template-rows: 100px 400px 100px;
+          font-size: 10px;
+        }
+        .box,
+        .box-1 {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+      }
+      @media (150px <= width <= 780px) {
+        header > nav {
+          position: relative;
+        }
+        .menu-icon {
+          padding: 10px 15px;
+          margin: 10px;
+          font-size: 20px;
+          display: block;
+          border-radius: 10px;
+          background-color: rgb(255, 217, 0);
+        }
+        .navbar {
+          display: none;
+        }
+        .menu-icon:active ~ .navbar {
+          display: grid;
+          background-color: rgb(247, 209, 0);
+          gap: 30px;
+          position: absolute;
+          top: 70px;
+          width: 150px;
+          padding: 10px;
+          border: 2px solid;
+          left: -160px;
+        }
+        .menu-icon {
+          cursor: pointer;
+        }
+        footer {
+          height: 400px;
+          font-size: 12px;
+        }
+        .upperfoot {
+          display: flex;
+          flex-direction: column;
+          height: 200px;
+        }
+        .rightupperfoot > button {
+          margin-left: 25%;
+        }
+        .middlefoot {
+          display: none;
+        }
+        .lowerfoot {
+          position: relative;
+          top: 100px;
+          bottom: 0px;
+          background-color: rgb(247, 209, 0);
+        }
+        .low {
+          height: 50px;
+          position: relative;
+          top: 100px;
+          background-color: rgb(247, 209, 0);
+        }
+        .box,
+        .box-1 {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          width: 100%;
+        }
+      }
+      @media (max-width: 480px) {
+        .tool-category h2 {
+          font-size: 1.1em;
+        }
+
+        .tool-category ul li {
+          font-size: 0.9em;
+        }
+      }
+
+      /* COMMENT FRESHHH */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .section-left {
+        height: 200px;
+      }
+
+      .section-left > p {
+        font-size: 63px;
+        font-weight: 600;
+        padding: 20px;
+        word-wrap: break-word;
+      }
+
+      .section-right > p {
+        font-size: 20px;
+      }
+
+      /* .container-2 {
+        width: 1000px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      } */
+
+      .box-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .box-1 > .content-left > h3 {
+        word-wrap: break-word;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .box-1 > .content-left > p {
+        word-wrap: break-word;
+        text-align: center;
+        font-size: 25px;
+      }
+
+      .content-left {
+        text-align: center;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/91a6d2fe0f.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        <div style="width: clamp(200px, 150px, 100px)">
+          <img
+            src="https://socialpanga.com/wp-content/uploads/2021/07/SocialPanga-Logo.svg"
+            alt="logo"
+            style="width: 100%"
+          />
+        </div>
+        <div class="navbar">
+          <div><a href="./home.html">Home</a></div>
+          <div><a href="./feature.html">Feature</a></div>
+          <div><a href="./Plans_&_Pricing.html">Pricing</a></div>
+        </div>
+        <div>
+          <button class="primarybutton">Log In</button
+          ><button class="primarybutton">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- comment FRESHHHH-->
+      <div class="container">
+        <div class="box">
+          <div class="section-left">
+            <p>Social Hub</p>
+          </div>
+          <div class="section-right">
+            <p>
+              Start solving your marketing challenges today with 55+ tools and
+              reports on SocialPanga.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="auto">
+          <div class="box-1">
+            <div class="content-left">
+              <h3>Keyword Research</h3>
+              <p>Bring traffic to your site using the best keywords.</p>
+            </div>
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/08-service-consulting-services.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/02-service-media-planning-buying.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+            <div class="content-left" style="">
+              <h3 style="">On Page SEO</h3>
+              <p>
+                Use best tactics to improve your site's health and SEO
+                performance.
+              </p>
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-left">
+              <h3>Competitor Analysis</h3>
+              <p>
+                Boost your performance by unpacking your competitors' online
+                activity and weekly traffic trends.
+              </p>
+            </div>
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/03-service-analytics-seo.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/04-service-branding-marketing-communications.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+            <div class="content-left" style="">
+              <h3 style="">Content Marketing</h3>
+              <p>
+                Develop a powerful content strategy with data-driven solutions.
+              </p>
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-left">
+              <h3>Local SEO</h3>
+              <p>
+                Optimize your site for local searches to get more customers in
+                your area.
+              </p>
+            </div>
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/01-service-social-media-creative-srtategy.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/05-service-mobile-website-ui-ux.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+            <div class="content-left" style="">
+              <h3 style="">Market Analysis</h3>
+              <p>
+                Analyze your position and get ahead of the competition in a
+                current or new market
+              </p>
+            </div>
+          </div>
+          <!-- s -->
+          <div class="box-1">
+            <div class="content-left">
+              <h3>Rank Tracking</h3>
+              <p>
+                Track daily changes of your target keywords in your target
+                location.
+              </p>
+            </div>
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/09-service-technology.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/06-service-influencer-management.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+            <div class="content-left" style="">
+              <h3>Social Media Management</h3>
+              <p>
+                Increase your brand awareness with our social media posting and
+                analytics platform
+              </p>
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="content-left">
+              <h3>Link Building</h3>
+              <p>
+                Find unique opportunities to strengthen your backlink profile
+              </p>
+            </div>
+            <div class="content-right">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/04/07-service-videio-production.png"
+                alt="img"  style="width: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- comment FRESHHHH-->
+    <footer>
+      <section id="foot" class="">
+        <div class="upperfoot container">
+          <div class="leftupperfoot">
+            <div><i class="fa-regular fa-envelope"></i> Contact us</div>
+            <p>20, 1st Floor, 3rd Cross, Jambu Nagar, Bengaluru, Karnataka</p>
+          </div>
+          <div class="rightupperfoot">
+            <button>Get started with Socialpanga!</button>
+            <p>or see our plans & pricing</p>
+          </div>
+        </div>
+        <div class="middlefoot container">
+          <div>
+            <p>SOCIALPANGA</p>
+            <p>Features</p>
+            <p>Pricing</p>
+            <p>Success Stories</p>
+            <p>Stats and Facts</p>
+            <p>Insights</p>
+            <p>News</p>
+          </div>
+          <div>
+            <p>COMMUNITY</p>
+            <p>Social Metric Blog</p>
+            <p>Webinars</p>
+          </div>
+          <div>
+            <p>MORE TOOLS</p>
+            <p>Analytics Reports</p>
+            <p>Projects</p>
+            <p>Agency Partners</p>
+            <p>Affiliate Program</p>
+            <p>SEOquake</p>
+            <p>Sensor</p>
+            <p>Prowly</p>
+            <p>Kompyte</p>
+            <p>App Center</p>
+            <p>Enterprise SEO</p>
+            <p>Free Tools</p>
+          </div>
+          <div>
+            <p>COMPANY</p>
+            <p>About Us</p>
+            <p>Newsroom</p>
+            <p>Careers</p>
+            <p>Partners</p>
+            <p>Legal Info</p>
+            <p>Privacy Policy</p>
+            <p>Cookie Settings</p>
+            <p>Do not sell my personal info</p>
+            <p>Security Info</p>
+            <p>For Investors</p>
+            <p>Social Metric Select</p>
+            <p>Global Issues Index</p>
+            <p>Contact Us</p>
+          </div>
+          <div>
+            <p>FOLLOW US</p>
+            <p>X (Twitter)</p>
+            <p>Facebook</p>
+            <p>Linkedln</p>
+            <p>Instagram</p>
+            <p>YouTube</p>
+            <p>Pinterest</p>
+          </div>
+          <div>
+            <p>HELP</p>
+            <p>Knowledge Base</p>
+            <p>Academy</p>
+            <p>Social Metric API</p>
+          </div>
+        </div>
+        <div class="low" style="">
+          <div class="lowerfoot container">
+            <div style="width: 200px">
+              <img
+                src="https://socialpanga.com/wp-content/uploads/2021/07/SocialPanga-Logo.svg"
+                alt="logo"
+                style="width: 100%"
+              />
+            </div>
+            <p>&copy; 2008 - 2024 Social Metric. All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
